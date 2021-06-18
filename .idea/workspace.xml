@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4c2de36-e6bd-48a6-a660-fa35f26dfee9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TP_FINAL_PW2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP_FINAL_DIAGRAMA.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ayudaMemoria.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/Config/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/conexion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/css/estilos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/datosRegistro.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/helpers/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/helpers/DataBase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/helpers/Render.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/img/37f42a69a4314310bbd41e20c39c4c6f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/img/fondo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/registrar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/roles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo/validarLogin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Config/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/ModuleInitializer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/Config/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/conexion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/css/estilos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/datosRegistro.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/helpers/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/helpers/DataBase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/helpers/Render.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/img/37f42a69a4314310bbd41e20c39c4c6f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/img/fondo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/registrar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/roles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Nueva carpeta/validarLogin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/View/homeView.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/View/loginView.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/View/partial/footer.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/View/partial/header.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/View/registrarView.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/controller/RegistrarController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/controller/controllerHome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/css/estilos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/helpers/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/helpers/DataBase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/helpers/ModuleInitializer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/helpers/Render.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/helpers/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/img/37f42a69a4314310bbd41e20c39c4c6f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/img/fondo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/model/LoginModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/model/RegistrarModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/InstalledVersions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/installed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/composer/platform_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/.php_cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/bin/build_bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Autoloader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Cache/AbstractCache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Cache/FilesystemCache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Cache/NoopCache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Compiler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Context.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Engine.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/InvalidArgumentException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/LogicException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/RuntimeException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/SyntaxException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/UnknownFilterException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/UnknownHelperException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Exception/UnknownTemplateException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/HelperCollection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/LambdaHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/ArrayLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/CascadingLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/FilesystemLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/InlineLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/MutableLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/ProductionFilesystemLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Loader/StringLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Logger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Logger/AbstractLogger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Logger/StreamLogger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Parser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Source.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Source/FilesystemSource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/src/Mustache/Tokenizer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/AutoloaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Cache/AbstractCacheTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Cache/FilesystemCacheTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/CompilerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/ContextTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/EngineTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Exception/SyntaxExceptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownFilterExceptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownHelperExceptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Exception/UnknownTemplateExceptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/ClosureQuirksTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/EngineTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/FiltersTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/HigherOrderSectionsTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/LambdaHelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/MustacheSpecTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/PartialLambdaIndentTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FiveThree/Functional/StrictCallablesTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/CallTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/ExamplesTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/HigherOrderSectionsTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/InheritanceTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/MustacheInjectionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/MustacheSpecTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/NestedPartialIndentTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Functional/ObjectSectionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/FunctionalTestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/HelperCollectionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Loader/ArrayLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Loader/CascadingLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Loader/FilesystemLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Loader/InlineLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Loader/ProductionFilesystemLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Loader/StringLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Logger/AbstractLoggerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Logger/StreamLoggerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/ParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/Source/FilesystemSourceTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/SpecTestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/TemplateTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/Mustache/Test/TokenizerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/autoloader/Mustache/Bar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/autoloader/Mustache/Foo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/autoloader/NonMustacheClass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/anchored_dot_notation/AnchoredDotNotation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/anchored_dot_notation/anchored_dot_notation.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/anchored_dot_notation/anchored_dot_notation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/anchored_dot_notation/partials/genre.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/blocks/Blocks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/blocks/blocks.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/blocks/blocks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/blocks/partials/parent.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/child_context/ChildContext.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/child_context/child_context.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/child_context/child_context.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/comments/Comments.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/comments/comments.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/comments/comments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/complex/complex.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/complex/complex.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/complex/complex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/delimiters/Delimiters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/delimiters/delimiters.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/delimiters/delimiters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/dot_notation/DotNotation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/dot_notation/dot_notation.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/dot_notation/dot_notation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/double_section/DoubleSection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/double_section/double_section.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/double_section/double_section.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/escaped/Escaped.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/escaped/escaped.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/escaped/escaped.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/filters/Filters.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/filters/filters.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/filters/filters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/grand_parent_context/GrandParentContext.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/grand_parent_context/grand_parent_context.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/grand_parent_context/grand_parent_context.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/i18n/I18n.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/i18n/i18n.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/i18n/i18n.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/implicit_iterator/ImplicitIterator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/implicit_iterator/implicit_iterator.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/implicit_iterator/implicit_iterator.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/inverted_double_section/InvertedDoubleSection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/inverted_double_section/inverted_double_section.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/inverted_double_section/inverted_double_section.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/inverted_section/InvertedSection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/inverted_section/inverted_section.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/inverted_section/inverted_section.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/nested_partials/NestedPartials.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/nested_partials/nested_partials.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/nested_partials/nested_partials.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/nested_partials/partials/fourth.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/nested_partials/partials/second.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/nested_partials/partials/third.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/partials/Partials.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/partials/partials.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/partials/partials.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/partials/partials/header.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/recursive_partials/RecursivePartials.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/recursive_partials/partials/child.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/recursive_partials/recursive_partials.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/recursive_partials/recursive_partials.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_iterator_objects/SectionIteratorObjects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_iterator_objects/section_iterator_objects.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_iterator_objects/section_iterator_objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_magic_objects/SectionMagicObjects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_magic_objects/section_magic_objects.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_magic_objects/section_magic_objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_objects/SectionObjects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_objects/section_objects.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/section_objects/section_objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/sections/Sections.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/sections/sections.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/sections/sections.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/sections_nested/SectionsNested.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/sections_nested/sections_nested.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/sections_nested/sections_nested.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/simple/Simple.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/simple/simple.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/simple/simple.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/unescaped/Unescaped.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/unescaped/unescaped.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/unescaped/unescaped.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/utf8/UTF8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/utf8/utf8.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/utf8/utf8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/utf8_unescaped/UTF8Unescaped.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/utf8_unescaped/utf8_unescaped.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/utf8_unescaped/utf8_unescaped.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/whitespace/Whitespace.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/whitespace/partials/alphabet.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/whitespace/whitespace.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/examples/whitespace/whitespace.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/templates/alpha.ms" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/templates/beta.ms" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/templates/one.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp-final/vendor/mustache/mustache/test/fixtures/templates/two.mustache" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/mustache/mustache" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1to3NbRYbHsZb7p8QGSxtRQxXI3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\View" />
+      <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final" />
+      <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\Config" />
+      <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\helpers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs" />
+      <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\helpers" />
+      <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\Config" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4c2de36-e6bd-48a6-a660-fa35f26dfee9" name="Default Changelist" comment="" />
+      <created>1623421575709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623421575709</updated>
+      <workItem from="1623421576903" duration="1230000" />
+      <workItem from="1623429671121" duration="45000" />
+      <workItem from="1623429736253" duration="17000" />
+      <workItem from="1623429763691" duration="6315000" />
+      <workItem from="1623682432137" duration="3491000" />
+      <workItem from="1624027327183" duration="1404000" />
+      <workItem from="1624034290168" duration="2652000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

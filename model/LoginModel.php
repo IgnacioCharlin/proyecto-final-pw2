@@ -1,0 +1,42 @@
+<?php
+
+
+class LoginModel
+{
+    private $database;
+
+    public function __construct($database)
+    {
+        $this->database = $database;
+
+    }
+
+
+    public function validarUsuario($email, $contraseña)
+    {
+        $msg["vista"] = "View/loginView.php";
+        $listUsuarios = $this->database->query("SELECT * FROM usuario");
+
+        var_dump($listUsuarios);
+        echo $email;
+        echo $contraseña;
+
+        foreach ($listUsuarios as $usuario){
+            echo $usuario["name"];
+            if ($usuario["rol"] != "inactivo") {
+                if (  $usuario["name"] == $email && $usuario["password"] == $contraseña) {
+                    $_SESSION["isLogin"] = true;
+                    $_SESSION["usuario"] = $usuario["name"];
+
+                    return header('location:/home/saludar');
+                    //
+                } else {
+                    $msg["error"] =   "no coincide";
+                }
+            } else {
+                $msg["error"] =  "usuario inactivo";
+            }
+        }
+        return $msg;
+    }
+}
