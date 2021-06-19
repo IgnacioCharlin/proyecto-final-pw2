@@ -18,7 +18,8 @@ class ModuleInitializer
         $this->database = Database::createDatabaseFromConfig($this->config);
     }
 
-    public function createHomeController(){
+    public function createHomeController()
+    {
 
         include_once("controller/controllerHome.php");
 

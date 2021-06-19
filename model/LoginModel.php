@@ -17,26 +17,23 @@ class LoginModel
         $msg["vista"] = "View/loginView.php";
         $listUsuarios = $this->database->query("SELECT * FROM usuario");
 
-        var_dump($listUsuarios);
-        echo $email;
-        echo $contraseña;
 
         foreach ($listUsuarios as $usuario){
-            echo $usuario["name"];
             if ($usuario["rol"] != "inactivo") {
-                if (  $usuario["name"] == $email && $usuario["password"] == $contraseña) {
+                if ($usuario["password"] == $contraseña && $usuario["name"] == $email) {
                     $_SESSION["isLogin"] = true;
                     $_SESSION["usuario"] = $usuario["name"];
 
                     return header('location:/home/saludar');
-                    //
+
                 } else {
                     $msg["error"] =   "no coincide";
+
                 }
             } else {
                 $msg["error"] =  "usuario inactivo";
+
             }
-        }
-        return $msg;
+        }  return $msg;
     }
 }

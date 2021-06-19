@@ -8,7 +8,7 @@
     <input type="password" id="password" name="password" placeholder="ingresar contraseña" required>
     <div class="w3-red">{{error}}</div>
     <button type="submit">Enviar</button>
-    <a href="registrar">Ir a registrarme</a>
+    <a href="/registrar">Ir a registrarme</a>
 </form>
 </main>
 
