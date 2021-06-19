@@ -20,7 +20,7 @@ class ModuleInitializer
 
     public function createHomeController(){
 
-        include_once("controller/controllerHome.php");
+        include_once("controller/HomeController.php");
 
         $model = array();//$this->database;
         return new HomeController($model, $this->render);
@@ -43,6 +43,12 @@ class ModuleInitializer
         include_once("controller/RegistrarController.php");
 
         return new RegistrarController($this->render, $this->database);
+    }
+
+    public function createRolesController(){
+
+        include_once("controller/RolesController.php");
+        return new RolesController($this->render, $this->database);
     }
 
 }
