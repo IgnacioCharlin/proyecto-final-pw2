@@ -21,7 +21,7 @@ class ModuleInitializer
     public function createHomeController()
     {
 //        include_once("model/PresentacionesModel.php");
-        include_once("controller/controllerHome.php");
+        include_once("controller/HomeController.php");
 
         $model = array();//$this->database;
         return new HomeController($model, $this->render);
