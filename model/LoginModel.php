@@ -24,7 +24,7 @@ class LoginModel
                     $_SESSION["isLogin"] = true;
                     $_SESSION["usuario"] = $usuario["name"];
 
-                    return header('location:/home/saludar');
+                    return header('location:/home');
 
                 } else {
                     $msg["error"] =   "no coincide";

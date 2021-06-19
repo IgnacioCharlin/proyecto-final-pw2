@@ -3,6 +3,7 @@ include_once("helpers/DataBase.php");
 include_once("helpers/Render.php");
 include_once("helpers/Config.php");
 require_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
+include_once ("model/UsuarioModel.php");
 
 
 class ModuleInitializer
@@ -10,12 +11,14 @@ class ModuleInitializer
     private $render;
     private $config;
     private $database;
+    private $usuarioModel;
 
     public function __construct()
     {
         $this->render = new Render('view/partial');
         $this->config = new Config("Config/config.ini");
         $this->database = Database::createDatabaseFromConfig($this->config);
+        $this->usuarioModel = new UsuarioModel($this->database);
     }
 
     public function createHomeController()
@@ -24,7 +27,7 @@ class ModuleInitializer
         include_once("controller/HomeController.php");
 
         $model = array();//$this->database;
-        return new HomeController($model, $this->render);
+        return new HomeController($model, $this->render,$this->usuarioModel);
     }
 
     public function createDefaultController()

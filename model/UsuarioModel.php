@@ -12,7 +12,7 @@ class UsuarioModel{
     }
 
     public function setRol($rol, $id){
-        return $this->connexion->query("update usuario set rol ='$rol' where id = $id");
+        return $this->connexion->insert("update usuario set rol ='$rol' where id = $id");
     }
 }
  ?>
