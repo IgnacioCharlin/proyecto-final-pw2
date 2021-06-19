@@ -21,9 +21,11 @@ class RegistrarController
     public function registro()
     {
         include_once ("model/RegistrarModel.php");
+        include_once ("helpers/HashPassword.php");
+
         $registrar = new RegistrarModel($this->database);
         $email = $_POST["email"];
-        $password = $_POST["password"];
+        $password = HashPassword::getHashPassword($_POST["password"]);
         $repitePassword= $_POST["repite-password"];
 
         $result = $registrar->registrarUsuario($email, $password, $repitePassword);

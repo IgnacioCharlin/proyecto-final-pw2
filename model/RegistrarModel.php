@@ -12,8 +12,7 @@ class RegistrarModel
 
     public function registrarUsuario($email, $password, $repitePassword)
     {
-
-        if ($password == $repitePassword){
+        if (password_verify($repitePassword, $password )){
             if($this->database->insert("INSERT INTO usuario ( name , password , rol ) values ('$email','$password', 'inactivo')")){
                 $result["vista"]="View/loginView.php";
                 return $result;

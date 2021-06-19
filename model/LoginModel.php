@@ -20,7 +20,7 @@ class LoginModel
 
         foreach ($listUsuarios as $usuario){
             if ($usuario["rol"] != "inactivo") {
-                if ($usuario["password"] == $contraseña && $usuario["name"] == $email) {
+                if (password_verify($contraseña, $usuario["password"]) && $usuario["name"] == $email) {
                     $_SESSION["isLogin"] = true;
                     $_SESSION["usuario"] = $usuario["name"];
 

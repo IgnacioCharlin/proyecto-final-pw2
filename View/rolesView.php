@@ -10,23 +10,24 @@
             <li><a href="roles">Asignar Rol</a></li>
         </ul>
     </section>
-    <form class="formulario-login" action="/roles/update" method="POST" >
-        {{#usuarios}}
+    {{#usuarios}}
+    <form class="formulario-login" action="/roles/update" method="post" >
+
         <tr>
             <td>{{name}}</td>
-            <select>
+            <input type="text" name="id" id="id"  value="{{id}}">
+            <select name="rol" id="rol" >
                 <option selected>{{rol}}</option>
                 <option>Administrador</option>
                 <option>Inactivo</option>
             </select>
             <br/>
-            <br/>
-            <br/>
-            <br/>
+
         </tr>
-        {{/usuarios}}
+
         <input type="submit" class="boton">
     </form>
+    {{/usuarios}}
 </main>
 
 {{> footer}}

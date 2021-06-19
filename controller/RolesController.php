@@ -19,8 +19,7 @@ class rolesController
 
     public function update(){
         $usuarioModel = new UsuarioModel($this->database);
-        
-        $data["usuarios"] = "hola";
-        echo $this->render->render("View/rolesView.php",$data);
+        $usuarioModel->setRol($_POST["rol"], $_POST["id"]);
+        $this->index();
     }
 }
