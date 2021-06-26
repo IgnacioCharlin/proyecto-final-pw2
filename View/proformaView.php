@@ -7,11 +7,19 @@
         </ul>
     </section>
     <section class="reporte">
-        <form>
-            <input type="text" id="email" name="email" placeholder="ingresar email" required>
-            <input type="password" id="password" name="password" placeholder="ingresar contraseña" required>
+        <form class="formulario-login" action="" method="POST">
+            <label id="numero">Numero Proforma:</label>
+            <input type="number" id="numero" name="numero" placeholder="" required>
+            <label id="fecha">Fecha: </label>
+            <input type="date" id="fecha" name="fecha" required>
+            <label id="cliente">Cliente: </label>
+            <input type="text" id="cliente" name="cliente" placeholder="ingresar nombre del cliente" required>
+            <label id="origen">Origen: </label>
+            <input type="text" id="origen" name="origen" placeholder="ingresar origen" required>
+            <label id="destino">Destino: </label>
+            <input type="text" id="destino" name="destino" placeholder="ingresar destino" required>
             <div class="w3-red">{{error}}</div>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="boton">Enviar</button>
         </form>
     </section>
 </main>
