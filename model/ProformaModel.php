@@ -16,4 +16,11 @@ class ProformaModel
         } else $result["vista"] = "View/homeSupervisorView.php";
         return $result;
     }
+
+    public function verProforma($numero){
+        $result["data"]= $this->database->insert("SELECT * FROM proforma WHERE numero = $numero");
+        foreach ($result["data"] as $dato){
+            var_dump($dato);
+        }
+    }
 }
