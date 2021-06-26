@@ -7,7 +7,7 @@
         </ul>
     </section>
     <section class="reporte">
-        <form class="formulario-login" action="" method="POST">
+        <form class="formulario-login" action="proforma/cargarProforma" method="POST">
             <label id="numero">Numero Proforma:</label>
             <input type="number" id="numero" name="numero" placeholder="" required>
             <label id="fecha">Fecha: </label>
