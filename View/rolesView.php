@@ -19,6 +19,8 @@
             <select name="rol" id="rol" >
                 <option selected>{{rol}}</option>
                 <option>Administrador</option>
+                <option>Chofer</option>
+                <option>Supervisor</option>
                 <option>Inactivo</option>
             </select>
             <br/>

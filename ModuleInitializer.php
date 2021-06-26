@@ -55,4 +55,11 @@ class ModuleInitializer
         return new RolesController($this->render, $this->database);
     }
 
+    public function createProformaController(){
+
+        include_once("controller/ProformaController.php");
+        return new ProformaController($this->render, $this->database);
+    }
+
+
 }

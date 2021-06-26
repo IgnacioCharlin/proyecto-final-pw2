@@ -21,7 +21,9 @@ class HomeController
             if($usuario["name"] == $_SESSION["usuario"]){
                 if($usuario["rol"]=="Administrador"){
                     $this->vistaAdm();
-                }else{
+                }if($usuario["rol"]=="Supervisor"){
+                    $this->vistaSupervisor();
+                } else{
                     $this->vistaChofer();
                 }
             }
@@ -37,6 +39,11 @@ class HomeController
     public function vistaAdm(){
         $data["usuario"] = $_SESSION["usuario"];
         echo $this->render->render("View/homeAdministradorView.php", $data);
+    }
+
+    public function vistaSupervisor(){
+        $data["usuario"] = $_SESSION["usuario"];
+        echo $this->render->render("View/homeSupervisorView.php", $data);
     }
 
 }
