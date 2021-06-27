@@ -4,9 +4,6 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="">Cargar Desvio</a></li>
-            <li><a href="">Enviar Reporte</a></li>
-            <li><a href="">Aviso Cliente</a></li>
             <li><a href="/roles">Asignar Rol</a></li>
         </ul>
     </section>

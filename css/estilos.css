@@ -10,6 +10,17 @@
 header{
     background-color: rgb(241, 241, 241);
 }
+
+footer{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    height: 3rem;
+    text-align: center;
+    font-size: large;
+}
 .encabezado{
     width: 98%;
     margin: auto;
@@ -26,7 +37,7 @@ header{
     height: 100vh;
     background-size: cover;
     width: 100%;
-    background: url("/TP_FINAL_PW2/tp-final/img/fondo.png"), -webkit-gradient(linear, right top, left top, from(#083b66), to(#2d6a9c));
+    background: url("/img/fondo.png"), -webkit-gradient(linear, right top, left top, from(#083b66), to(#2d6a9c));
 }
 
 .formulario-login{
@@ -38,6 +49,7 @@ header{
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.712);
+    height: fit-content;
 }
 
 .campos{
@@ -47,7 +59,13 @@ header{
     border-bottom: 1px solid grey;
     padding: 0.3rem;
 }
-
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+.botones button , a {
+    width: 33%;
+}
 .boton{
     background-color: #083b66;
     border: none;
@@ -62,6 +80,22 @@ header{
     background-color: #05223a;
     transition: 0.5s;
 }
+.cancelar{
+    background-color: #c10e22;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: large;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.registrar{
+    padding-top: 1rem;
+    text-align: center;
+    color: #2d6a9c;
+}
 
  /** Pagina Home **/
  .main-home{
@@ -73,6 +107,10 @@ header{
      background-color: #083b66;
      height: 100vh;
  }
+
+.footer-texto{
+    margin-top: 1rem;
+}
 
  ul{
     margin-top: 2rem;
@@ -105,3 +143,26 @@ header{
  .reporte span{
      font-weight: 700;
  }
+
+ /** Pagina Proforma **/
+.formulario-proforma{
+    width: 90%;
+    background-color: rgb(241, 241, 241);
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.712);
+}
+.campos-proforma{
+    display: flex;
+    justify-content: space-around;
+}
+.div-proforma{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
