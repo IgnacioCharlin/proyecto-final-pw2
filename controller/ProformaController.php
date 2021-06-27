@@ -29,8 +29,7 @@ class ProformaController
     public function verProforma(){
         $numero = $_POST["numero"];
         $result["data"]= $this->proforma->verProforma($numero);
-        var_dump($result["data"]);
-        //echo $this->render->render($result);
+        echo $this->render->render("View/verProformaView.php", $result);
     }
 
 }

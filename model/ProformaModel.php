@@ -18,9 +18,8 @@ class ProformaModel
     }
 
     public function verProforma($numero){
-        $result["data"]= $this->database->insert("SELECT * FROM proforma WHERE numero = $numero");
-        foreach ($result["data"] as $dato){
-            var_dump($dato);
-        }
+        $res["error"]= "Proforma no encontrada";
+        $result= ($this->database->query("SELECT * FROM proforma WHERE numero = $numero") ? $this->database->query("SELECT * FROM proforma WHERE numero = $numero") : $res );
+        return $result;
     }
 }

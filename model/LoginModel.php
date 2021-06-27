@@ -22,6 +22,7 @@ class LoginModel
             if ($usuario["rol"] != "inactivo") {
                 if (password_verify($contraseña, $usuario["password"]) && $usuario["name"] == $email) {
                     $_SESSION["isLogin"] = true;
+                    $_SESSION["idUser"] = $usuario["id"];
                     $_SESSION["usuario"] = $usuario["name"];
 
                     return header('location:/home');
