@@ -7,6 +7,7 @@
             <li><a href="roles">Asignar Rol</a></li>
         </ul>
     </section>
+    <section class="card-roles">
     {{#usuarios}}
     <form class="formulario-login" action="/roles/update" method="post" >
 
@@ -27,6 +28,7 @@
         <input type="submit" class="boton">
     </form>
     {{/usuarios}}
+    </section>
 </main>
 
 {{> footer}}

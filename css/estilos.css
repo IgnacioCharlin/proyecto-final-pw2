@@ -21,6 +21,10 @@ footer{
     text-align: center;
     font-size: large;
 }
+
+label{
+    text-align: start;
+}
 .encabezado{
     width: 98%;
     margin: auto;
@@ -89,12 +93,19 @@ footer{
     text-transform: uppercase;
     border-radius: 4px;
     text-decoration: none;
+    text-align: center;
+}
+
+.cancelar:hover{
+    background-color: #651119;
+    transition: 0.5s;
 }
 
 .registrar{
     padding-top: 1rem;
     text-align: center;
     color: #2d6a9c;
+    width: 100%;
 }
 
  /** Pagina Home **/
@@ -143,11 +154,6 @@ footer{
  .reporte span{
      font-weight: 700;
  }
-
- /** Pagina Proforma **/
-.ancho{
-    width: 60%!important;
-}
 .formulario-proforma{
     width: 90%;
     background-color: rgb(241, 241, 241);
@@ -172,4 +178,11 @@ footer{
     display: flex;
     flex-direction: column;
     width: 48%;
+}
+
+/** Pagina Roles **/
+.card-roles{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }

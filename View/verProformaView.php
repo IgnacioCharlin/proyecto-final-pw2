@@ -9,7 +9,7 @@
     <section class="reporte">
 
 
-            <div class="ancho formulario-proforma">
+            <div class="formulario-login">
                 {{#data}}
                 <label class="align-center" id="numero">Numero Proforma: {{numero}}</label>
                 <label class="align-center" id="fecha">Fecha: {{fecha}}</label>
@@ -17,17 +17,21 @@
 
                 <label class="align-center" id="origen">Origen: {{origen}} </label>
                 <label class="align-center" id="destino">Destino: {{destino}}</label>
+                <div class="botones">
+                    <a class="cancelar w3-margin-top w3-col" href="/home">volver</a>
+                </div>
+
                 {{/data}}
             </div>
 
                 {{#data}}
-            <div class="w3-container w3-red">
+            <div  class="w3-red">
                     {{error}}
             </div>
                 {{/data}}
-            <div >
-                <a class="w3-button w3-green w3-margin-top" href="/home">volver</a>
-            </div>
+
+
+
 
     </section>
 </main>

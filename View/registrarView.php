@@ -1,5 +1,3 @@
-
-
 {{> header}}
 
 <main class="login">
@@ -8,8 +6,8 @@
         <input class="campos" type="password" id="password" name="password" placeholder="ingresar contraseña" required>
         <input class="campos" type="password" id="repite-password" name="repite-password" placeholder="repetir contraseña" required>
         <div class="w3-red">{{error}}</div>
-        <button type="submit" class="boton">Registrar</button>
-        <a href="/" class="cancelar">Cancelar</a>
+        <button type="submit" class="boton w3-margin-bottom">Registrar</button>
+        <a href="/" class="cancelar w3-col">Cancelar</a>
     </form>
 </main>
 
