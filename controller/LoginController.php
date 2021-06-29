@@ -1,15 +1,18 @@
 <?php
+include_once ("model/LoginModel.php");
 
 
 class LoginController
 {
     private $database;
     private $render;
+    private $model;
 
     public function __construct($render, $database)
     {
         $this->database = $database;
         $this->render =$render;
+        $this->model = new LoginModel($this->database);
     }
 
     public function index()
@@ -18,12 +21,10 @@ class LoginController
         echo $this->render->render("View/loginView.php");
     }
     public function validar(){
-        include_once ("model/LoginModel.php");
 
         $email = $_POST["email"];
         $contraseña = $_POST["password"];
-        $model = new LoginModel($this->database);
-        $result = $model->validarUsuario($email,$contraseña);
+        $result = $this->model->validarUsuario($email,$contraseña);
 
         echo $this->render->render($result["vista"], $result);
 
@@ -33,5 +34,10 @@ class LoginController
             header('location:/');
             exit();
         }
+    public function activarUsuario(){
+
+        $result = $this->model->activarUsuario($_GET["email"], $_GET["codigo"]);
+        $this->index();
+    }
 
 }

@@ -37,4 +37,18 @@ class LoginModel
             }
         }  return $msg;
     }
+    public function activarUsuario($email, $codigo){
+        if ($email && $codigo) {
+            $usuario = $this->database->query("SELECT * FROM usuario WHERE name = '$email'");
+            if($usuario){
+                $id =$usuario["0"]["id"];
+                $estado = $this->database->query("SELECT * FROM estado_usuario WHERE numero = $id");
+                if( $estado["0"]["codigo"] == $codigo){
+                    $this->database->insert("update estado_usuario set estado = TRUE where numero = $id");
+                    $msg["activado"] = "se activo el usuario";
+                    return $msg;
+                } echo "codigo incorrecto";
+            }  echo "usuario incorrecto";
+        } echo "usuario y/o codigo no ingresado";
+    }
 }

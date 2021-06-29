@@ -13,7 +13,7 @@
 
         <tr>
             <td>{{name}}</td>
-            <input class="campos" type="text" name="id" id="id"  value="{{id}}">
+            <input class="id-form" type="text" name="id" id="id"  value="{{id}}">
             <select class="campos" name="rol" id="rol" >
                 <option selected>{{rol}}</option>
                 <option>Administrador</option>
@@ -24,7 +24,7 @@
             <br/>
 
         </tr>
-
+        <a class="boton-a w3-green w3-margin-bottom" href="/roles/activarPorMail/id={{id}}">enviar mail</a>
         <input type="submit" class="boton">
     </form>
     {{/usuarios}}

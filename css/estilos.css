@@ -43,6 +43,9 @@ label{
     width: 100%;
     background: url("/img/fondo.png"), -webkit-gradient(linear, right top, left top, from(#083b66), to(#2d6a9c));
 }
+.id-form{
+    display: none;
+}
 
 .formulario-login{
     display: flex;
@@ -66,6 +69,17 @@ label{
 .botones{
     display: flex;
     justify-content: space-between;
+}
+.boton-a{
+    width: 100%;
+    background-color: #083b66;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
 }
 .botones button , a {
     width: 33%;

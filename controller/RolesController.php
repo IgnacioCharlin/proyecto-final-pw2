@@ -4,11 +4,13 @@ class rolesController
 {
     private $database;
     private $render;
+    private $usuarioModel;
 
     public function __construct($render, $database)
     {
         $this->database = $database;
         $this->render =$render;
+        $this->usuarioModel = new UsuarioModel($this->database);
     }
 
     public function index(){
@@ -19,7 +21,12 @@ class rolesController
 
     public function update(){
         $usuarioModel = new UsuarioModel($this->database);
-        $usuarioModel->setRol($_POST["rol"], $_POST["id"]);
+        $this->usuarioModel->setRol($_POST["rol"], $_POST["id"]);
         $this->index();
     }
+    public function activarPorMail(){
+        $this->usuarioModel->enviarMail($_GET["id"]);
+
+    }
+
 }
