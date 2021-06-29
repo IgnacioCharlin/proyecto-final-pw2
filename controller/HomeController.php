@@ -29,12 +29,12 @@ class HomeController
             }
 
         }
-        echo $this->render->render("View/homeView.php", $data);
+        echo $this->render->render("View/homeChoferView.php", $data);
     }
     public function vistaChofer()
     {
         $data["usuario"] = $_SESSION["usuario"];
-        echo $this->render->render("View/homeView.php", $data);
+        echo $this->render->render("View/homeChoferView.php", $data);
     }
     public function vistaAdm(){
         $data["usuario"] = $_SESSION["usuario"];

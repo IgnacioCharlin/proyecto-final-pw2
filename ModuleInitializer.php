@@ -61,5 +61,11 @@ class ModuleInitializer
         return new ProformaController($this->render, $this->database);
     }
 
+    public function createGastosController(){
+
+        include_once("controller/GastosController.php");
+        return new GastosController($this->render, $this->database);
+    }
+
 
 }

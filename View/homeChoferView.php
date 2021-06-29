@@ -3,7 +3,7 @@
    <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="">Ver proforma</a></li>
+            <li><a href="gastos">Cargar Gasto</a></li>
         </ul>
     </section>
     <section class="reporte">
