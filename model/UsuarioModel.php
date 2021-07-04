@@ -7,6 +7,7 @@ class UsuarioModel{
 
     public function __construct($database){
         $this->connexion = $database;
+
     }
 
     public function getUsuarios(){
@@ -18,8 +19,8 @@ class UsuarioModel{
     }
     public function enviarMail($id)
     {
-        $usuario = $this->connexion->query("SELECT * FROM usuario WHERE id = '$id'");
-        $userExistente = $this->connexion->query("SELECT * FROM estado_usuario WHERE numero = '$id'");
+        $usuario =  $this->connexion->query("SELECT * FROM usuario WHERE id = '$id'");
+        $userExistente =  $this->connexion->query("SELECT * FROM estado_usuario WHERE numero = '$id'");
         if ($userExistente["0"]["codigo"]) {
             $codigo = $userExistente["0"]["codigo"];
 
@@ -28,9 +29,11 @@ class UsuarioModel{
             $this->connexion->insert("INSERT INTO estado_usuario (numero , codigo) values ($id, '$codigo')");
         }
 
-        if (MailModel::enviarMail($usuario, $codigo)) {
+        if (MailModel::enviarMail($usuario, $codigo)){
             echo "mail enviado correctamente";
         }
     }
+
+
 }
  ?>

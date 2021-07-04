@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-y:hidden;
-    overflow-x:hidden;
+    /*overflow-y:hidden;*/
+    /*overflow-x:hidden;*/
     font-family: 'Roboto', sans-serif;
 }
 
@@ -138,6 +138,7 @@ label{
 }
 
  ul{
+    list-style: none;
     margin-top: 2rem;
     width: 80%;
     margin: 2rem auto;
@@ -199,4 +200,17 @@ label{
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+/*pagina posicion*/
+.formulario-posicion{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    width: 80%;
+    margin: 4rem auto;
+    background-color:rgb(241, 241, 241);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.712);
+    height: fit-content;
 }

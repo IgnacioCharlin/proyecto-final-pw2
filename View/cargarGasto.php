@@ -4,10 +4,11 @@
         <ul>
             <li><a href="/home">Inicio</a></li>
             <li><a href="gasto">Cargar Gasto</a></li>
+            <li><a href="/cargarDatosViaje/posicion">Cargar Posición</a></li>
         </ul>
     </section>
     <section class="reporte">
-        <form class="formulario-login" action="gastos/cargarGasto" method="POST">
+        <form class="formulario-login" action="/cargarDatosViaje/cargarGasto" method="POST">
             <label id="numeroViaje">Numero De Viaje:</label>
             <input class="campos" type="number" name="numeroViaje" id="numeroViaje" REQUIRED>
             <label id="gasto">Gasto:</label>

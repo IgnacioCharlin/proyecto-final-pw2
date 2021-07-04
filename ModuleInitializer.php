@@ -1,4 +1,7 @@
 <?php
+
+
+
 include_once("helpers/DataBase.php");
 include_once("helpers/Render.php");
 include_once("helpers/Config.php");
@@ -61,11 +64,10 @@ class ModuleInitializer
         return new ProformaController($this->render, $this->database);
     }
 
-    public function createGastosController(){
+    public function createCargarDatosViajeController(){
 
-        include_once("controller/GastosController.php");
-        return new GastosController($this->render, $this->database);
+        include_once("controller/CargarDatosViajeController.php");
+        return new CargarDatosViajeController($this->render, $this->database);
     }
-
 
 }

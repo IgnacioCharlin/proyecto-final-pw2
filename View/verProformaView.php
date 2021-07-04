@@ -3,7 +3,9 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="">Cargar Proforma</a></li>
+            <li><a href="gasto">Cargar Gasto</a></li>
+            <li><a href="/cargarDatosViaje/posicion">Cargar Posición</a></li>
+
         </ul>
     </section>
     <section class="reporte">
