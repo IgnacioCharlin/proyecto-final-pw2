@@ -2,22 +2,23 @@
 
 class HomeController
 {
-    private $datos;
+    private $database;
     private $render;
     private $usuarioModel;
+    private $profomaModel;
 
 
-    public function __construct($datos, $render,$usuarioModel)
+    public function __construct($render,$database,$usuarioModel)
     {
-        $this->datos = $datos;
         $this->render =$render;
+        $this->database = $database;
         $this->usuarioModel = $usuarioModel;
+        $this->profomaModel = new ProformaModel($this->database);
     }
     public function index()
     {
         $data["usuarios"] = $this->usuarioModel->getUsuarios();
         foreach ($data["usuarios"] as $usuario){
-
             if($usuario["name"] == $_SESSION["usuario"]){
                 if($usuario["rol"]=="Administrador"){
                     $this->vistaAdm();
@@ -27,16 +28,17 @@ class HomeController
                     $this->vistaChofer();
                 }
             }
-
         }
         echo $this->render->render("View/homeChoferView.php", $data);
     }
     public function vistaChofer()
     {
+        $data["proforma"] = $this->profomaModel->verTodasLasProforma();
         $data["usuario"] = $_SESSION["usuario"];
         echo $this->render->render("View/homeChoferView.php", $data);
     }
     public function vistaAdm(){
+        $data["proforma"] = $this->profomaModel->verTodasLasProforma();
         $data["usuario"] = $_SESSION["usuario"];
         echo $this->render->render("View/homeAdministradorView.php", $data);
     }

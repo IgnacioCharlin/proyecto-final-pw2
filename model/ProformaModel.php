@@ -22,4 +22,10 @@ class ProformaModel
         $result= ($this->database->query("SELECT * FROM proforma WHERE numero = $numero") ? $this->database->query("SELECT * FROM proforma WHERE numero = $numero") : $res );
         return $result;
     }
+
+    public function verTodasLasProforma(){
+        $res["error"]= "Proformas no encontradas";
+        $result= ($this->database->query("SELECT * FROM proforma") ? $this->database->query("SELECT * FROM proforma ") : $res );
+        return $result;
+    }
 }

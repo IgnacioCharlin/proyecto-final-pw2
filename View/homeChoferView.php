@@ -8,16 +8,29 @@
         </ul>
     </section>
     <section class="reporte">
-        {{#msg}}<div class="w3-panel w3-green">
-            <h3>{{msg}}</h3>
 
-        </div>
-        {{/msg}}
-        <form class="formulario-login" action="proforma/verProforma" method="POST">
-            <label id="numero">Numero De Viaje:</label>
-            <input class="campos" type="number" name="numero" id="numero" REQUIRED>
-            <button type="submit" class="boton">BUSCAR</i></button>
-        </form>
+        <table class="tabla-proformas mt-3">
+            <thead>
+            <tr>
+                <th scope="col">Nro</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Origen</th>
+                <th scope="col">Destino</th>
+            </tr>
+            </thead>
+            {{#proforma}}
+            <form class="formulario-login" action="/roles/update" method="post" >
+                <tbody>
+                <td>{{numero}}</td>
+                <td>{{fecha}}</td>
+                <td>{{cliente}}</td>
+                <td>{{origen}}</td>
+                <td>{{destino}}</td>
+                </tbody>
+            </form>
+            {{/proforma}}
+        </table>
     </section>
 </main>
 

@@ -9,13 +9,29 @@
         </ul>
     </section>
     <section class="reporte">
-        <p><span>Clinte:</span> Federico Gonzalez</p>
-        <p><span>Dirrecion:</span> Thames 1232</p>
-        <p><span>Movil:</span> (154) Toyota Hilux </p>
-        <p><span>Equipo de arrastre:</span> Sin carga</p>
-        <p><span>Tiempo Estimado:</span> 2 Horas</p>
-        <p><span>Kilometros provistos:</span> 15 KM</p>
-    </section>
+        <table class="tabla-proformas mt-3">
+            <thead>
+            <tr>
+                <th scope="col">Nro</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Origen</th>
+                <th scope="col">Destino</th>
+            </tr>
+            </thead>
+            {{#proforma}}
+            <form class="formulario-login" action="/roles/update" method="post" >
+                <tbody>
+                <td>{{numero}}</td>
+                <td>{{fecha}}</td>
+                <td>{{cliente}}</td>
+                <td>{{origen}}</td>
+                <td>{{destino}}</td>
+                </tbody>
+            </form>
+            {{/proforma}}
+        </table>
+
 </main>
 
 {{> footer}}

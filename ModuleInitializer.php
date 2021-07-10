@@ -7,6 +7,7 @@ include_once("helpers/Render.php");
 include_once("helpers/Config.php");
 require_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once ("model/UsuarioModel.php");
+include_once ("model/ProformaModel.php");
 
 
 class ModuleInitializer
@@ -26,11 +27,8 @@ class ModuleInitializer
 
     public function createHomeController()
     {
-
         include_once("controller/HomeController.php");
-
-        $model = array();//$this->database;
-        return new HomeController($model, $this->render,$this->usuarioModel);
+        return new HomeController($this->render,$this->database,$this->usuarioModel);
     }
 
     public function createDefaultController()
