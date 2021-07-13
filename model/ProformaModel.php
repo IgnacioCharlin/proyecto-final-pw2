@@ -28,4 +28,25 @@ class ProformaModel
         $result= ($this->database->query("SELECT * FROM proforma") ? $this->database->query("SELECT * FROM proforma ") : $res );
         return $result;
     }
+
+    public function verProfromaAsignadaAlChofer($id_chofer){
+        $res["error"]= "Proformas no encontradas";
+        $result= ($this->database->query("SELECT * FROM proforma WHERE id_chofer = $id_chofer") ? $this->database->query("SELECT * FROM proforma WHERE id_chofer = $id_chofer") : $res );
+        return $result;
+    }
+
+    public function eliminarProforma($numero){
+        if(!$this->database->insert("DELETE FROM `proforma` WHERE `proforma`.`numero` = $numero")) {
+            $result["vista"] = "View/proformaView.php";
+            $result["error"] = "Error al eliminar la proforma";
+        } else $result["vista"] = "View/homeAdministradorView.php";
+        return $result;
+    }
+
+    public function editarProforma($numero){
+        $res["error"]= "Proformas no encontradas";
+        $result= ($this->database->query("UPDATE FROM proforma WHERE numero = $numero") ? $this->database->query("UPDATE FROM proforma WHERE numero = $numero") : $res );
+        return $result;
+    }
+
 }

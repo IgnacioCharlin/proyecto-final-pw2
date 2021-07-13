@@ -46,9 +46,21 @@ class ProformaController
 
     }
     public function verProforma(){
-        $numero = $_POST["numero"];
+        $numero = $_GET["numero"];
         $result["data"]= $this->proforma->verProforma($numero);
         echo $this->render->render("View/verProformaView.php", $result);
+    }
+
+    public function eliminarProforma(){
+        $numero = $_GET["numero"];
+        $this->proforma->eliminarProforma($numero);
+        echo $this->render->render("View/homeAdministradorView.php");
+    }
+
+    public function editarProforma(){
+        $numero = $_GET["numero"];
+        $this->proforma->eliminarProforma($numero);
+        echo $this->render->render("View/homeAdministradorView.php");
     }
 
 }

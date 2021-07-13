@@ -25,17 +25,18 @@ class HomeController
                 }if($usuario["rol"]=="Supervisor"){
                     $this->vistaSupervisor();
                 } else{
-                    $this->vistaChofer();
+                    $this->vistaChofer($usuario["id"]);
                 }
             }
         }
         echo $this->render->render("View/homeChoferView.php", $data);
     }
-    public function vistaChofer()
+    public function vistaChofer($id_chofer)
     {
-        $data["proforma"] = $this->profomaModel->verTodasLasProforma();
+        $data["proforma"] = $this->profomaModel->verProfromaAsignadaAlChofer($id_chofer);
         $data["usuario"] = $_SESSION["usuario"];
         echo $this->render->render("View/homeChoferView.php", $data);
+
     }
     public function vistaAdm(){
         $data["proforma"] = $this->profomaModel->verTodasLasProforma();
@@ -44,6 +45,7 @@ class HomeController
     }
 
     public function vistaSupervisor(){
+        $data["proforma"] = $this->profomaModel->verTodasLasProforma();
         $data["usuario"] = $_SESSION["usuario"];
         echo $this->render->render("View/homeSupervisorView.php", $data);
     }
