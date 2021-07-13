@@ -26,7 +26,11 @@
                 <label id="km">Kilometros:</label>
                 <input class="campos" type="numero" name="km" id="km" required >
                 <label id="gasto">Descripcion:</label>
-                <input class="campos" type="text" name="gasto" id="gasto" required >
+                <select class="campos" name="gasto" id="gasto" >
+                    <option>Peajes</option>
+                    <option>Nafta</option>
+                    <option>Viáticos</option>
+                </select>
                 <button type="submit" class="boton">Agregar</button>
             </div>
         </form>
