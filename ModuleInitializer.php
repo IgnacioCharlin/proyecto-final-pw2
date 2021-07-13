@@ -1,13 +1,11 @@
 <?php
-
-
-
 include_once("helpers/DataBase.php");
 include_once("helpers/Render.php");
 include_once("helpers/Config.php");
 require_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once ("model/UsuarioModel.php");
 include_once ("model/ProformaModel.php");
+include_once ("model/CamionModel.php");
 
 
 class ModuleInitializer
@@ -66,6 +64,12 @@ class ModuleInitializer
 
         include_once("controller/CargarDatosViajeController.php");
         return new CargarDatosViajeController($this->render, $this->database);
+    }
+
+    public function createCamionController(){
+
+        include_once("controller/CamionController.php");
+        return new CamionController($this->render, $this->database);
     }
 
 }

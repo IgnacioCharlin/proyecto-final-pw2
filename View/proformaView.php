@@ -33,6 +33,4 @@
         </form>
     </section>
 </main>
-
-
 {{> footer}}

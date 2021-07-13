@@ -122,56 +122,57 @@ label{
     width: 100%;
 }
 
- /** Pagina Home **/
- .main-home{
+/** Pagina Home **/
+.main-home{
     display: flex;
- }
+}
 
- .tareas{
-     width: 25%;
-     background-color: #083b66;
-     height: 100vh;
- }
+.tareas{
+    width: 25%;
+    background-color: #083b66;
+    height: 100vh;
+}
 
 .footer-texto{
     margin-top: 1rem;
 }
 
- ul{
+ul{
     list-style: none;
     margin-top: 2rem;
     width: 80%;
     margin: 2rem auto;
     height: inherit;
- }
+}
 
- ul li{
-     margin-bottom: 1rem;
- }
+ul li{
+    margin-bottom: 1rem;
+}
 
- ul a{
-     color: white;
-     text-decoration: none;
-     padding-bottom: 1rem;
- }
+ul a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
 
- .tabla-proformas{
-     width: 100%;
- }
- .reporte{
-     width: 75%;
-     text-align: center;
-     margin-top: 2rem;
- }
+.tabla-proformas{
+    width: 100%;
+}
 
- .reporte p{
-     font-size: x-large;
-     margin-bottom: 1rem;
- }
+.reporte{
+    width: 75%;
+    text-align: center;
+    margin-top: 2rem;
+}
 
- .reporte span{
-     font-weight: 700;
- }
+.reporte p{
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+
+.reporte span{
+    font-weight: 700;
+}
 .formulario-proforma{
     width: 90%;
     background-color: rgb(241, 241, 241);
@@ -246,8 +247,8 @@ tbody{
 }
 .mapa {
     z-index: 1;
-    width:30rem;
-    height:100%;
+    width:150px;
+    height:150px;
     margin: auto;
 }
 .col-posicion-input{
@@ -257,4 +258,25 @@ tbody{
     width: 17rem;
     text-align: center;
 
+}
+
+/** Cargar Camion **/
+.div-estado{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 60%;
+    height: 2rem;
+}
+
+.div-estado p{
+    font-size: medium;
+    font-weight: bolder;
+}
+.div-estado p:first-child{
+    margin-top: 0.5rem;
+}
+
+.div-estado:last-child{
+    margin-bottom: 1rem;
 }

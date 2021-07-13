@@ -29,6 +29,4 @@
         <div class="w3-red">{{error}}</div>
     </section>
 </main>
-
-
 {{> footer}}
