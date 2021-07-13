@@ -9,15 +9,17 @@
     </section>
     <section class="reporte">
 
-        <table class="tabla-proformas mt-3">
+        <table class="tabla-proformas w3-table w3-bordered w3-centered">
             <thead>
-            <tr>
                 <th scope="col">Nro</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Cliente</th>
                 <th scope="col">Origen</th>
                 <th scope="col">Destino</th>
-            </tr>
+                <th scope="col">km_prev</th>
+                <th scope="col">comb_prev</th>
+                <th scope="col">patente</th>
+                <th scope="col">ver</th>
             </thead>
             {{#proforma}}
             <form class="formulario-login" action="/roles/update" method="post" >
@@ -27,6 +29,10 @@
                 <td>{{cliente}}</td>
                 <td>{{origen}}</td>
                 <td>{{destino}}</td>
+                <td>{{km_previsto}}</td>
+                <td>{{combustible_previsto}}</td>
+                <td>{{id_camion}}</td>
+                <td><a href="proforma/verProforma?numero={{numero}}"><i class="icono-ver fa fa-eye" aria-hidden="true"></i></a></td>
                 </tbody>
             </form>
             {{/proforma}}
