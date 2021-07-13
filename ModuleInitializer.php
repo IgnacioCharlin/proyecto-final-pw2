@@ -14,6 +14,7 @@ class ModuleInitializer
     private $config;
     private $database;
     private $usuarioModel;
+    private $camionModel;
 
     public function __construct()
     {
@@ -21,6 +22,7 @@ class ModuleInitializer
         $this->config = new Config("Config/config.ini");
         $this->database = Database::createDatabaseFromConfig($this->config);
         $this->usuarioModel = new UsuarioModel($this->database);
+        $this->camionModel = new CamionModel($this->database);
     }
 
     public function createHomeController()
@@ -57,7 +59,7 @@ class ModuleInitializer
     public function createProformaController(){
 
         include_once("controller/ProformaController.php");
-        return new ProformaController($this->render, $this->database);
+        return new ProformaController($this->render, $this->database,$this->usuarioModel,$this->camionModel);
     }
 
     public function createCargarDatosViajeController(){

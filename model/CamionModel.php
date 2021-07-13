@@ -13,6 +13,18 @@ class CamionModel
             $result["error"] = "Error al cargar el camion";
         } else $result["vista"] = "View/homeSupervisorView.php";
         return $result;
+    }
 
+    public function getCamiones(){
+        return $this->connexion->query("SELECT * FROM camion");
+    }
+
+    public function estaDisponible($patente){
+        $camiones = $this->getCamiones();
+        foreach ($camiones as $camion){
+            if($camion["patente"] == $patente && $camion["estado"] == 1){
+                return $camion;
+            }
+        }
     }
 }

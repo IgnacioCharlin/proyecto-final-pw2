@@ -16,13 +16,21 @@
                 <label id="fecha">Fecha: </label>
                 <input class="campos" type="date" id="fecha" name="fecha" required>
                 <label id="cliente">Cliente: </label>
-                <input class="campos" type="text" id="cliente" name="cliente" placeholder="ingresar nombre del cliente" required>
+                <input class="campos" type="text" id="cliente" name="cliente" required>
+                <label id="origen">Origen: </label>
+                <input class="campos" type="text" id="origen" name="origen"  required>
+                <label id="destino">Destino: </label>
+                <input class="campos" type="text" id="destino" name="destino"required>
             </div>
             <div class="div-proforma">
-                <label id="origen">Origen: </label>
-                <input class="campos" type="text" id="origen" name="origen" placeholder="ingresar origen" required>
-                <label id="destino">Destino: </label>
-                <input class="campos" type="text" id="destino" name="destino" placeholder="ingresar destino" required>
+                <label id="id_chofer">Legajo Chofer: </label>
+                <input class="campos" type="number" id="id_chofer" name="id_chofer" required>
+                <label id="km_previstos">Kilometraje Previstos: </label>
+                <input class="campos" type="number" id="km_previstos" name="km_previstos" required>
+                <label id="combustible_previsto">Combustible Previsto: </label>
+                <input class="campos" type="number" id="combustible_previsto" name="combustible_previsto" required>
+                <label id="patente">Patente del Camión: </label>
+                <input class="campos" type="text" id="patente" name="patente" required>
             </div>
             </div>
             <div class="w3-red">{{error}}</div>

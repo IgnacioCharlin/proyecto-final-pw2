@@ -9,8 +9,8 @@ class ProformaModel
 
     }
 
-    public function registrarProforma($numero, $fecha, $cliente,$origen,$destino){
-        if(!$this->database->insert("INSERT INTO proforma(numero,fecha,cliente,origen,destino) VALUES ( $numero , '$fecha','$cliente','$origen','$destino' )")) {
+    public function registrarProforma($numero, $fecha, $cliente,$origen,$destino,$id_chofer,$km_previstos,$combustible_previsto,$patente_camion){
+        if(!$this->database->insert("INSERT INTO proforma(numero,fecha,cliente,origen,destino,id_chofer,km_previsto,combustible_previsto,id_camion) VALUES ( $numero , '$fecha','$cliente','$origen','$destino',$id_chofer,$km_previstos,$combustible_previsto,'$patente_camion')")) {
             $result["vista"] = "View/proformaView.php";
             $result["error"] = "Error al cargar la proforma";
         } else $result["vista"] = "View/homeSupervisorView.php";

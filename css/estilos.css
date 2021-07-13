@@ -58,11 +58,13 @@ label{
     box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.712);
     height: fit-content;
 }
-
+.formulario-login input{
+    margin-bottom: 2rem;
+}
 .campos{
     border: 0;
     background-color: rgb(241, 241, 241);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid grey;
     padding: 0.3rem;
 }
@@ -162,7 +164,7 @@ ul a{
 .reporte{
     width: 75%;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .reporte p{

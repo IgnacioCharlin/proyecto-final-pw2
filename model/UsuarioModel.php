@@ -14,6 +14,15 @@ class UsuarioModel{
         return $this->connexion->query("SELECT * FROM usuario");
     }
 
+    public function esChofer($id){
+        $usuarios = $this->getUsuarios();
+        foreach ($usuarios as $usuario ){
+            if($id == $usuario["id"] && $usuario["rol"] == "Chofer"){
+                return $usuario;
+            }
+        }
+    }
+
     public function setRol($rol, $id){
         return $this->connexion->insert("update usuario set rol ='$rol' where id = $id");
     }
