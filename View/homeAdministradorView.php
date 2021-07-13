@@ -32,7 +32,7 @@
                 <td>{{cliente}}</td>
                 <td>{{origen}}</td>
                 <td>{{destino}}</td>
-                <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                <td><a href="proforma/editarProforma?numero={{numero}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                 <td><a href="proforma/eliminarProforma?numero={{numero}}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                 </tbody>
             </form>
