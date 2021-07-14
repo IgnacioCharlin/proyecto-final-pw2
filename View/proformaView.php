@@ -23,14 +23,31 @@
                 <input class="campos" type="text" id="destino" name="destino"required>
             </div>
             <div class="div-proforma">
-                <label id="id_chofer">Legajo Chofer: </label>
-                <input class="campos" type="number" id="id_chofer" name="id_chofer" required>
                 <label id="km_previstos">Kilometraje Previstos: </label>
                 <input class="campos" type="number" id="km_previstos" name="km_previstos" required>
                 <label id="combustible_previsto">Combustible Previsto: </label>
                 <input class="campos" type="number" id="combustible_previsto" name="combustible_previsto" required>
+                <label id="id_chofer">Nombre Chofer: </label>
+                <select class="campos" id="id_chofer" name="id_chofer" required >
+                    <option disabled selected> elegi al chofer</option>
+                    {{#choferes}}
+                    <option value="{{id}}">{{name}}</option>
+                    {{/choferes}}
+                </select>
                 <label id="patente">Patente del Camión: </label>
-                <input class="campos" type="text" id="patente" name="patente" required>
+                <select class="campos" id="patente" name="patente" required >
+                <option disabled selected> elegi el camion</option>
+                   {{#camiones}}
+                    <option>{{patente}}</option>
+                    {{/camiones}}
+                </select>
+                <label id="patente_semi">Patente del Semi: </label>
+                <select class="campos" id="patente_semi" name="patente_semi" required >
+                    <option disabled selected> elegi el semi</option>
+                    {{#semis}}
+                    <option>{{patente}}</option>
+                    {{/semis}}
+                </select>
             </div>
             </div>
             <div class="w3-red">{{error}}</div>

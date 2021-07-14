@@ -35,6 +35,9 @@ class HomeController
     {
         $data["proforma"] = $this->profomaModel->verProfromaAsignadaAlChofer($id_chofer);
         $data["usuario"] = $_SESSION["usuario"];
+        if(isset($_GET["msg"])){
+        $data["msg"]= $_GET["msg"];
+        }
         echo $this->render->render("View/homeChoferView.php", $data);
 
     }

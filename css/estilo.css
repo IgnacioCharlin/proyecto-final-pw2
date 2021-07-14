@@ -13,7 +13,7 @@ header{
 
 footer{
     background-color: black;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     width: 100%;
     color: white;
@@ -25,15 +25,17 @@ footer{
     display: flex;
 
 }
-
+.id-form{
+    display: none;
+}
 .tareas{
-    width: 25%;
+    width: 25rem;
     background-color: #083b66;
-    height: 90vh;
+    height: auto;
 }
 
 .footer-texto{
-    margin-top: 0.75rem;
+    padding-top: 0.7rem;
 }
 
 ul{
@@ -58,7 +60,7 @@ label{
     text-align: start;
 }
 .reporte{
-    width: 75%;
+    width: 70rem;
     text-align: center;
     margin-top: 1rem;
 }
@@ -69,6 +71,7 @@ label{
 }
 .campos{
     border: 0;
+    width: 100%;
     background-color: rgb(241, 241, 241);
     margin-bottom: 2rem;
     border-bottom: 1px solid grey;
@@ -97,26 +100,31 @@ label{
 .formulario-posicion{
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     width: 90%;
+=======
+    width: 47rem;
+>>>>>>> 8972a2c719e4bb50d56d3c1cbf9f10546ec5d8d7
     margin: 0.6rem auto;
     background-color:rgb(241, 241, 241);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.712);
-    height:450px;
+    height:auto;
+    text-align: left;
 }
 .mapa {
 
     z-index: 300;
     width:26rem;
     height:20rem;
-    margin: auto;
+    margin: 1.5rem auto;
 }
 .col-posicion-input{
     display: flex;
     flex-direction: column;
     margin: 0 2rem ;
     width: 17rem;
-    text-align: center;
+
 
 }

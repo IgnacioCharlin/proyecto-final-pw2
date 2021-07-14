@@ -11,34 +11,30 @@ class CargarDatosViajeModel
 
     }
 
-    public function registrarGasto($numeroViaje, $gasto, $descripcion,$fecha){
-        if (!$this->database->query("SELECT * FROM proforma WHERE numero = $numeroViaje")){
-            $result["vista"] = "View/cargarGasto.php";
-            $result["error"] = "No existe ese viaje";
-        } elseif(!$this->database->insert("INSERT INTO gasto(numeroViaje,gasto,descripcion,fecha) VALUES ( $numeroViaje , '$gasto','$descripcion','$fecha')")) {
-            $result["vista"] = "View/cargarGasto.php";
-            $result["error"] = "Error al cargar el gasto";
-        } else {
-            $result["vista"] = "View/homeChoferView.php";
-            $result["msg"] = "Gasto cargado corretamente";
-        }
-        return $result;
+    public function viajeActual()
+    {
+        $id= $_SESSION["idUser"];
+        $datos = $this->database->query("SELECT * FROM proforma p LEFT JOIN estado_viaje e on p.numero = e.id_viaje WHERE p.id_chofer = $id AND e.viaje_activo = true");
+        return $datos["0"];
     }
 
-    public function registrarPosicion($numeroViaje, $coordenadas, $fecha, $hora)
+    public function registrarPosicion($numeroViaje, $coordenadas, $fecha, $hora,$km, $descripcion,$gasto)
     {
         if (!$this->database->query("SELECT * FROM proforma WHERE numero = $numeroViaje")){
             $result["vista"] = "View/cargarPosicion.php";
             $result["error"] = "No existe ese viaje, revisa el numero de viaje";
-        } elseif(!$this->database->insert("INSERT INTO posicion(numeroViaje,posicion,fecha, hora) VALUES ( $numeroViaje , '$coordenadas','$fecha','$hora')")) {
+        } elseif(!$this->database->insert("INSERT INTO posicion(numeroViaje,posicion,fecha, hora,kilometraje, descripcion, gasto) VALUES ( $numeroViaje , '$coordenadas','$fecha','$hora',$km, '$descripcion',$gasto)")) {
             $result["vista"] = "View/cargarPosicion.php";
             $result["error"] = "Error al cargar la poicion";
         } else {
-            $result["vista"] = "View/homeChoferView.php";
-            $result["msg"] = "Posicion cargada corretamente";
+            $msg = "datos cargados corretamente";
+            header("location:/home?msg=$msg");
+            exit();
         }
             return $result;
     }
+
+
 
 
 }

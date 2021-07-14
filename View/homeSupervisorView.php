@@ -3,8 +3,8 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="/roles">Asignar Rol</a></li>
             <li><a href="/camion">Cargar Camion</a></li>
+            <li><a href="">Cargar Semi</a></li>
         </ul>
     </section>
     <section class="reporte">
