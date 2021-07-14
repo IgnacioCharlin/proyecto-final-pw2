@@ -8,7 +8,16 @@ class ProformaModel
         $this->database = $database;
 
     }
-
+    public function datosProforma()
+    {
+        $choferes = $this->database->query("SELECT id, name FROM usuario WHERE rol = 'Chofer'");
+        $camiones = $this->database->query("SELECT patente FROM camion WHERE estado = true");
+        $semis = $this->database->query("SELECT patente FROM semi WHERE estado = true");
+        $data["choferes"] = $choferes;
+        $data["camiones"] = $camiones;
+        $data["semis"] = $semis;
+        return $data;
+    }
     public function registrarProforma($numero, $fecha, $cliente,$origen,$destino,$id_chofer,$km_previstos,$combustible_previsto,$patente_camion){
         if(!$this->database->insert("INSERT INTO proforma(numero,fecha,cliente,origen,destino,id_chofer,km_previsto,combustible_previsto,id_camion) VALUES ( $numero , '$fecha','$cliente','$origen','$destino',$id_chofer,$km_previstos,$combustible_previsto,'$patente_camion')")) {
             $result["vista"] = "View/proformaView.php";
@@ -45,8 +54,12 @@ class ProformaModel
 
     public function editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente){
         $res["error"]= "Proformas no encontradas";
-        $result = ($this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") ? $this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") : $res );
+
+        $result = ($this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") ? $res["vista"] = "View/proformaView.php" : $res );
+
         return $result;
     }
+
+
 
 }

@@ -11,8 +11,8 @@
     <section class="reporte" >
         <form class="formulario-posicion" action="/cargarDatosViaje/cargarPosicion"}; method="POST">
             <div>
-            <label id="numeroViaje">Numero De Viaje:</label>
-            <!--            <input class="campos" type="number" name="numeroViaje" id="numeroViaje" REQUIRED>-->
+            <label id="numeroViaje">Viaje numero: {{numero}}</label>
+            <input style="display: none" type="text" name="numeroViaje" id="numeroViaje" value="{{numero}}" REQUIRED>
             <div id="mapa" class="mapa" style=""></div>
             <!--            cuando avancemos hay que ocultar las coordenadas ahora se dejan para ver que las captura real desde el navegador web, falta mobile-->
             <labe>Posición actual</labe>
@@ -25,8 +25,10 @@
                 <input class="campos" type="time" name="hora" id="hora" required >
                 <label id="km">Kilometros:</label>
                 <input class="campos" type="numero" name="km" id="km" required >
-                <label id="gasto">Descripcion:</label>
-                <select class="campos" name="gasto" id="gasto" >
+                <label id="gasto">importe:</label>
+                <input class="campos" type="numero" name="gasto" id="gasto" required >
+                <label id="descripcion">Descripcion:</label>
+                <select class="campos" name="descripcion" id="descripcion" >
                     <option>Peajes</option>
                     <option>Nafta</option>
                     <option>Viáticos</option>

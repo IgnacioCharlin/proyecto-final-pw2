@@ -37,6 +37,11 @@
             </form>
             {{/proforma}}
         </table>
+        {{#msg}}
+        <div class="w3-panel w3-green">
+            <h3>{{msg}}</h3>
+        </div>
+        {{/msg}}
     </section>
 </main>
 
