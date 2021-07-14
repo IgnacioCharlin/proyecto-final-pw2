@@ -60,7 +60,7 @@ label{
 .reporte{
     width: 75%;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .reporte p{
@@ -97,7 +97,7 @@ label{
 .formulario-posicion{
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 90%;
     margin: 0.6rem auto;
     background-color:rgb(241, 241, 241);
     padding: 2rem;
@@ -115,7 +115,7 @@ label{
 .col-posicion-input{
     display: flex;
     flex-direction: column;
-    margin: auto 2rem;
+    margin: 0 2rem ;
     width: 17rem;
     text-align: center;
 
