@@ -79,7 +79,9 @@ class ProformaController
         if($this->usuario->esChofer($id_chofer) != null) {
             if($this->camion->estaDisponible($patente) != null){
                 $result = $this->proforma->editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente);
+
                 return header("location:/home");
+
                 echo $this->render->render($result["vista"], $result);
             }else{
                 $result["error"] = "Ese camion no esta disponible";

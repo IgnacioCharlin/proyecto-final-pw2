@@ -53,11 +53,19 @@ class ProformaModel
     }
 
     public function editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente){
-        $res["error"]= "Proformas no encontradas";
 
-        $result = ($this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") ? $res["vista"] = "View/proformaView.php" : $res );
+        if(!$this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero")) {
+            $result["vista"] = "View/proformaView.php";
+            $result["error"] = "Error al cargar la proforma";
+        } else $result["vista"] = "View/homeSupervisorView.php";
 
         return $result;
+        /*
+        $res["error"]= "Proformas no encontradas";
+        $res = ($this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") ? $this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") : $res );
+        $res["vista"] = "View/homeAdministradorView.php";
+        return $res;
+        */
     }
 
 
