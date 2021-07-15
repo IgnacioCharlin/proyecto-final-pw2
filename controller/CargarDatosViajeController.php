@@ -31,12 +31,19 @@ class CargarDatosViajeController
         echo $this->render->render($result["vista"], $result);
 
     }
-    public function finalizarViaje(){
-
+    public function consultarGastos(){
+        $result["numeroViaje"] = $_GET["numero"];
         $numeroViaje = $_GET["numero"];
         $result["data"] = $this->cargar->consultarGastosDeViaje($numeroViaje);
         $result["total"] = $this->cargar->sumatoriaGasto($numeroViaje);
         echo $this->render->render("View/finalizarViajeView.php", $result);
+    }
+
+    public function finalizarViaje(){
+        $result["numeroViaje"] = $_GET["numero"];
+        $result["data"] = $this->cargar->finalizarViaje($result["numeroViaje"]);
+        echo $this->render->render("View/homeChoferView.php", $result);
+
     }
 
 

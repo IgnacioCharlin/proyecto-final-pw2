@@ -340,3 +340,9 @@ tbody{
 .total{
     margin-left: 0.4rem;
 }
+
+.finalizar{
+    width: 90%;
+    margin: auto;
+    /*display: none;*/
+}

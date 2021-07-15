@@ -3,8 +3,7 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="gasto">Cargar Gasto</a></li>
-            <li><a href="/cargarDatosViaje/posicion">Cargar Posición</a></li>
+            <li><a href="/cargarDatosViaje/posicion">Cargar Gasto</a></li>
 
         </ul>
     </section>
@@ -21,12 +20,14 @@
                 </thead>
                 {{#data}}
                 <tbody>
+
                     <td>{{fecha}}</td>
                     <td>{{hora}}</td>
                     <td>{{descripcion}}</td>
                     <td>{{gasto}}</td>
+
                     {{/data}}
-                    <a href="#">Finalizar</a>
+                    <a href="/cargarDatosViaje/finalizarViaje?numero={{numeroViaje}}" class="cancelar finalizar">Finalizar</a>
                     {{#total}}
                     <div class="total-gasto">
                         <p>total:</p>

@@ -47,5 +47,4 @@
         {{/msg}}
         <div class="w3-red">{{error}}</div>
 </main>
-
 {{> footer}}

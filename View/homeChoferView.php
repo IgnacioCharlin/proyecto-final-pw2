@@ -28,7 +28,7 @@
                     <td>{{destino}}</td>
                     <td>{{id_camion}}</td>
                     <td><a href="proforma/verProforma?numero={{numero}}"><i class="icono-ver fa fa-eye" aria-hidden="true"></i></a></td>
-                    <td><a href="cargarDatosViaje/finalizarViaje?numero={{numero}}"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a></td>
+                    <td><a href="cargarDatosViaje/consultarGastos?numero={{numero}}"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a></td>
                 </tbody>
             </form>
             {{/proforma}}

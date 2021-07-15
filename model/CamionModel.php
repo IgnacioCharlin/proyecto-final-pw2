@@ -11,7 +11,7 @@ class CamionModel
         if(!$this->connexion->insert("INSERT INTO camion(patente,marca,modelo,estado) VALUES ( '$patente' , '$marca','$modelo',$estado );")) {
             $result["vista"] = "View/camionView.php";
             $result["error"] = "Error al cargar el camion";
-        } else $result["vista"] = "View/homeSupervisorView.php";
+        } else header("location:/home");
         return $result;
     }
 
