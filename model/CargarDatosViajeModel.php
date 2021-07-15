@@ -31,10 +31,25 @@ class CargarDatosViajeModel
             header("location:/home?msg=$msg");
             exit();
         }
-            return $result;
+        return $result;
+    }
+    public function consultarGastosDeViaje($numeroViaje){
+        $gastoPorViaje = $this->database->query("SELECT * FROM posicion WHERE numeroViaje = $numeroViaje");
+        if($gastoPorViaje != null){
+            return $gastoPorViaje;
+        }else{
+            $result["vista"]="View/HomeChoferView";
+            $result["error"] = "No se encontraron Gastos para ese viaje";
+        }
     }
 
-
-
-
+    public function sumatoriaGasto($numeroViaje){
+        $sumatoriaGasto = $this->database->query("SELECT SUM(gasto) as total FROM `posicion` WHERE numeroViaje = 1;");
+        if($sumatoriaGasto != null){
+            return $sumatoriaGasto;
+        }else{
+            $result["vista"]="View/HomeChoferView";
+            $result["error"] = "No se encontraron Gastos para ese viaje";
+        }
+    }
 }

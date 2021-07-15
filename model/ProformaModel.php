@@ -12,7 +12,7 @@ class ProformaModel
     {
         $choferes = $this->database->query("SELECT id, name FROM usuario WHERE rol = 'Chofer'");
         $camiones = $this->database->query("SELECT patente FROM camion WHERE estado = true");
-        $semis = $this->database->query("SELECT patente FROM semi WHERE estado = true");
+        $semis = $this->database->insert("SELECT patente FROM semi WHERE estado = true");
         $data["choferes"] = $choferes;
         $data["camiones"] = $camiones;
         $data["semis"] = $semis;
@@ -67,7 +67,4 @@ class ProformaModel
         return $res;
         */
     }
-
-
-
 }

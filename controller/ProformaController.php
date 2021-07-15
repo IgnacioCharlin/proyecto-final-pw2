@@ -65,6 +65,7 @@ class ProformaController
         echo $this->render->render("View/editarProformaView.php",$result);
     }
 
+
     public function actualizarProforma(){
         $numero = $_POST["numero"];
         $fecha = date('Y-m-d', strtotime($_POST['fecha']));

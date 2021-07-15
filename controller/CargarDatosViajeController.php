@@ -31,5 +31,14 @@ class CargarDatosViajeController
         echo $this->render->render($result["vista"], $result);
 
     }
+    public function finalizarViaje(){
+
+        $numeroViaje = $_GET["numero"];
+        $result["data"] = $this->cargar->consultarGastosDeViaje($numeroViaje);
+        $result["total"] = $this->cargar->sumatoriaGasto($numeroViaje);
+        echo $this->render->render("View/finalizarViajeView.php", $result);
+    }
+
+
 
 }

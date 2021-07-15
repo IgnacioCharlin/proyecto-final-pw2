@@ -1,11 +1,8 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
-
 }
 header{
     background-color: rgb(241, 241, 241);
@@ -23,6 +20,7 @@ footer{
 }
 .main-home{
     display: flex;
+    height: 83vh;
 
 }
 .id-form{
@@ -60,7 +58,7 @@ label{
     text-align: start;
 }
 .reporte{
-    width: 70rem;
+    width: 90%;
     text-align: center;
     margin-top: 1rem;
 }
@@ -100,11 +98,7 @@ label{
 .formulario-posicion{
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
     width: 90%;
-=======
-    width: 47rem;
->>>>>>> 8972a2c719e4bb50d56d3c1cbf9f10546ec5d8d7
     margin: 0.6rem auto;
     background-color:rgb(241, 241, 241);
     padding: 2rem;
@@ -123,7 +117,7 @@ label{
 .col-posicion-input{
     display: flex;
     flex-direction: column;
-    margin: 0 2rem ;
+    margin: auto 2rem;
     width: 17rem;
 
 
