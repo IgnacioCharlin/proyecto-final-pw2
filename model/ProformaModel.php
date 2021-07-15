@@ -10,8 +10,16 @@ class ProformaModel
     }
     public function datosProforma()
     {
-        $choferes = $this->database->query("SELECT id, name FROM usuario WHERE rol = 'Chofer'");
-        $camiones = $this->database->query("SELECT patente FROM camion WHERE estado = true");
+        $choferes = $this->database->query("SELECT us.id, us.name FROM sistematransporte.usuario us WHERE rol = 'Chofer'
+                                            and not exists ( SELECT p.id_chofer FROM sistematransporte.proforma p 
+                                            left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
+                                            WHERE e.viaje_activo = true
+                                            and us.id = p.id_chofer)");
+        $camiones = $this->database->query("SELECT ca.patente FROM camion ca WHERE estado = true
+                                            AND NOT EXISTS(SELECT p.id_camion FROM sistematransporte.proforma p  
+                                            left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
+                                            WHERE  e.viaje_activo = true
+                                            AND ca.patente = p.id_camion)");
         $semis = $this->database->query("SELECT patente FROM semi WHERE estado = true");
         $data["choferes"] = $choferes;
         $data["camiones"] = $camiones;
@@ -39,8 +47,8 @@ class ProformaModel
     }
 
     public function verProfromaAsignadaAlChofer($id_chofer){
-        $res["error"]= "Proformas no encontradas";
-        $result= ($this->database->query("SELECT * FROM proforma WHERE id_chofer = $id_chofer") ? $this->database->query("SELECT * FROM proforma WHERE id_chofer = $id_chofer") : $res );
+        $res["error"]= "No se te asigno ningun viaje";
+        $result= ($this->database->query("SELECT * FROM proforma p LEFT JOIN estado_viaje e on p.numero = e.id_viaje WHERE p.id_chofer = $id_chofer AND e.viaje_activo = true") ? $this->database->query("SELECT * FROM proforma p LEFT JOIN estado_viaje e on p.numero = e.id_viaje WHERE p.id_chofer = $id_chofer AND e.viaje_activo = true") : $res );
         return $result;
     }
 
@@ -53,21 +61,46 @@ class ProformaModel
     }
 
     public function editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente){
+        $res["error"]= "Proformas no encontradas";
 
-        if(!$this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero")) {
-            $result["vista"] = "View/proformaView.php";
-            $result["error"] = "Error al cargar la proforma";
-        } else $result["vista"] = "View/homeSupervisorView.php";
+        $result = ($this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") ? $res["vista"] = "View/proformaView.php" : $res );
 
         return $result;
-        /*
-        $res["error"]= "Proformas no encontradas";
-        $res = ($this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") ? $this->database->insert("UPDATE proforma SET numero = $numero , fecha = '$fecha', cliente='$cliente',origen='$origen',destino='$destino',id_chofer = $id_chofer,km_previsto=$km_previsto,combustible_previsto=$combustible_previsto,id_camion='$patente' WHERE numero = $numero") : $res );
-        $res["vista"] = "View/homeAdministradorView.php";
-        return $res;
-        */
     }
 
+    public function activar($numero)
+    {
+       $result = $this->database->query("SELECT id_chofer, id_camion FROM proforma where numero = $numero");
+        $camion = $result["0"]["id_camion"];
+        $chofer = $result["0"]["id_chofer"];
+      if($this->database->query("SELECT ca.patente FROM sistematransporte.camion ca
+                                WHERE ca.patente = '$camion' AND
+                                EXISTS (SELECT p.id_camion FROM sistematransporte.proforma p  
+                                left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
+                                WHERE  e.viaje_activo = true
+                                AND ca.patente = p.id_camion)")){
+          $msg= "No se pudo activar la proforma, el camion ya tiene un viaje activo";
+          header("location:/home?error=$msg");
+          exit();
+      } elseif ($this->database->query("SELECT us.id FROM sistematransporte.usuario us 
+                                        WHERE us.id = $chofer
+                                        AND EXISTS ( SELECT p.id_chofer FROM sistematransporte.proforma p 
+                                        left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
+                                        WHERE e.viaje_activo = true
+                                        and us.id = p.id_chofer)")){
+          $msg= "No se pudo activar la proforma, el chofer ya tiene un viaje activo";
+          header("location:/home?error=$msg");
+          exit();
+      }
+        elseif(!$this->database->insert("INSERT INTO estado_viaje values ($numero, true)")){
+           $msg= "No se pudo activar la proforma";
+            header("location:/home?error=$msg");
+            exit();
+        }
+        $msg = "Proforma activada";
+        header("location:/home?msg=$msg");
+        exit();
+    }
 
 
 }

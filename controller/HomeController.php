@@ -35,21 +35,29 @@ class HomeController
     {
         $data["proforma"] = $this->profomaModel->verProfromaAsignadaAlChofer($id_chofer);
         $data["usuario"] = $_SESSION["usuario"];
-        if(isset($_GET["msg"])){
-        $data["msg"]= $_GET["msg"];
-        }
+        $data["msg"]= (isset($_GET["msg"]) ? $_GET["msg"] : null);
+
         echo $this->render->render("View/homeChoferView.php", $data);
 
     }
     public function vistaAdm(){
         $data["proforma"] = $this->profomaModel->verTodasLasProforma();
         $data["usuario"] = $_SESSION["usuario"];
+        $data["msg"]= (isset($_GET["msg"]) ? $_GET["msg"] : null);
+        if(isset($_GET["error"])){
+            $data["error"]= $_GET["error"];
+        }
         echo $this->render->render("View/homeAdministradorView.php", $data);
     }
 
     public function vistaSupervisor(){
         $data["proforma"] = $this->profomaModel->verTodasLasProforma();
         $data["usuario"] = $_SESSION["usuario"];
+        $data["msg"]= (isset($_GET["msg"]) ? $_GET["msg"] : null);
+
+        if(isset($_GET["error"])){
+            $data["error"]= $_GET["error"];
+        }
         echo $this->render->render("View/homeSupervisorView.php", $data);
     }
 
