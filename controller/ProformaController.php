@@ -79,12 +79,11 @@ class ProformaController
         $km_previsto = $_POST["km_previstos"];
         $combustible_previsto = $_POST["combustible_previsto"];
         $patente = $_POST["patente"];
-        $patenteSemi = $_POST["patente_semi"];
         if($this->usuario->esChofer($id_chofer) != null) {
             if($this->camion->estaDisponible($patente) != null){
                 $result = $this->proforma->editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente);
-                return header("location:/home");
                 echo $this->render->render($result["vista"], $result);
+                return header("location:/home");
             }else{
                 $result["error"] = "Ese camion no esta disponible";
                 return $this->render->render("View/editarProformaView.php", $result);
