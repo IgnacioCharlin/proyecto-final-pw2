@@ -11,7 +11,7 @@ class CamionModel
         if(!$this->connexion->insert("INSERT INTO camion(patente,marca,modelo,estado) VALUES ( '$patente' , '$marca','$modelo',$estado );")) {
             $result["vista"] = "View/camionView.php";
             $result["error"] = "Error al cargar el camion";
-        } else header("location:/home");
+        } else $result["vista"] = "View/homeSupervisorView.php";
         return $result;
     }
 
@@ -26,5 +26,20 @@ class CamionModel
                 return $camion;
             }
         }
+    }
+
+    public function camionesActivos()
+    {
+        return $this->connexion->query("SELECT * FROM camion WHERE estado = true");
+    }
+
+    public function enviarAMantenimietno($patente)
+    {
+        $datos = "No se pudo enviar el camion a mantenimiento";
+
+        if ($this->connexion->insert("UPDATE camion set estado = false WHERE '$patente' = patente")){
+            $datos = "Se envio el camion a mantenimiento";
+        }
+        return $datos;
     }
 }

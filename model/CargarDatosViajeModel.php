@@ -15,7 +15,7 @@ class CargarDatosViajeModel
     {
         $id= $_SESSION["idUser"];
         $datos = $this->database->query("SELECT * FROM proforma p LEFT JOIN estado_viaje e on p.numero = e.id_viaje WHERE p.id_chofer = $id AND e.viaje_activo = true");
-        return $datos["0"];
+        return $datos;
     }
 
     public function registrarPosicion($numeroViaje, $coordenadas, $fecha, $hora,$km, $descripcion,$gasto)
@@ -31,7 +31,7 @@ class CargarDatosViajeModel
             header("location:/home?msg=$msg");
             exit();
         }
-        return $result;
+            return $result;
     }
     public function consultarGastosDeViaje($numeroViaje){
         $gastoPorViaje = $this->database->query("SELECT * FROM posicion WHERE numeroViaje = $numeroViaje");
@@ -56,4 +56,7 @@ class CargarDatosViajeModel
     public function finalizarViaje($numeroViaje){
         $this->database->insert("UPDATE estado_viaje SET viaje_activo = 0  WHERE id_viaje = $numeroViaje");
     }
+
+
+
 }

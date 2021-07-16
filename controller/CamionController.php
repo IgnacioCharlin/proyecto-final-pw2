@@ -26,11 +26,17 @@ class CamionController
         echo $this->render->render("View/homeSupervisorView.php", $result);
     }
 
-    /*
-    public function verProforma(){
-        $numero = $_POST["numero"];
-        $result["data"]= $this->proforma->verProforma($numero);
-        echo $this->render->render("View/verProformaView.php", $result);
+
+    public function mantenimietnoCamion(){
+        $result["res"] = (isset($_GET["msg"]) ? $_GET["msg"] : null );
+        $result["data"]= $this->camion->camionesActivos();
+        echo $this->render->render("View/camionesActivosView.php", $result);
     }
-    */
+    public function enviarMantenimiento(){
+        $patente = $_GET["patente"];
+        $datos= $this->camion->enviarAMantenimietno($patente);
+        header("location:/camion/mantenimietnoCamion?msg=$datos");
+        exit();
+    }
+
 }

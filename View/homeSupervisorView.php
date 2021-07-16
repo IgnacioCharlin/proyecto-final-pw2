@@ -3,8 +3,8 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="/roles">Asignar Rol</a></li>
             <li><a href="/camion">Cargar Camion</a></li>
+            <li><a href="/camion/mantenimietnoCamion">Mantenimiento Camion</a></li>
         </ul>
     </section>
     <section class="reporte">
@@ -19,7 +19,6 @@
                 <th scope="col">Cliente</th>
                 <th scope="col">Origen</th>
                 <th scope="col">Destino</th>
-                <th scope="col">Activar</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
             </tr>
@@ -32,8 +31,7 @@
                 <td>{{cliente}}</td>
                 <td>{{origen}}</td>
                 <td>{{destino}}</td>
-                <td><a href="proforma/activarProforma?numero={{numero}}"><i class="fa fa-truck" aria-hidden="true"></i></a></td>
-                <td><a href="proforma/editarProforma?numero={{numero}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                 <td><a href="proforma/eliminarProforma?numero={{numero}}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                 </tbody>
             </form>
@@ -41,4 +39,6 @@
         </table>
     </section>
 </main>
+
+
 {{> footer}}
