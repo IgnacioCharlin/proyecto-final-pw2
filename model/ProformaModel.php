@@ -20,7 +20,7 @@ class ProformaModel
                                             left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
                                             WHERE  e.viaje_activo = true
                                             AND ca.patente = p.id_camion)");
-        $semis = $this->database->insert("SELECT patente FROM semi WHERE estado = true");
+        $semis = $this->database->query("SELECT patente FROM semi WHERE estado = true");
         $data["choferes"] = $choferes;
         $data["camiones"] = $camiones;
         $data["semis"] = $semis;
@@ -56,7 +56,7 @@ class ProformaModel
         if(!$this->database->insert("DELETE FROM `proforma` WHERE `proforma`.`numero` = $numero")) {
             $result["vista"] = "View/proformaView.php";
             $result["error"] = "Error al eliminar la proforma";
-        } else header("location:/home");
+        } else $result["vista"] = "View/homeAdministradorView.php";
         return $result;
     }
 
@@ -70,30 +70,30 @@ class ProformaModel
 
     public function activar($numero)
     {
-        $result = $this->database->query("SELECT id_chofer, id_camion FROM proforma where numero = $numero");
+       $result = $this->database->query("SELECT id_chofer, id_camion FROM proforma where numero = $numero");
         $camion = $result["0"]["id_camion"];
         $chofer = $result["0"]["id_chofer"];
-        if($this->database->query("SELECT ca.patente FROM sistematransporte.camion ca
+      if($this->database->query("SELECT ca.patente FROM sistematransporte.camion ca
                                 WHERE ca.patente = '$camion' AND
                                 EXISTS (SELECT p.id_camion FROM sistematransporte.proforma p  
                                 left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
                                 WHERE  e.viaje_activo = true
                                 AND ca.patente = p.id_camion)")){
-            $msg= "No se pudo activar la proforma, el camion ya tiene un viaje activo";
-            header("location:/home?error=$msg");
-            exit();
-        } elseif ($this->database->query("SELECT us.id FROM sistematransporte.usuario us 
+          $msg= "No se pudo activar la proforma, el camion ya tiene un viaje activo";
+          header("location:/home?error=$msg");
+          exit();
+      } elseif ($this->database->query("SELECT us.id FROM sistematransporte.usuario us 
                                         WHERE us.id = $chofer
                                         AND EXISTS ( SELECT p.id_chofer FROM sistematransporte.proforma p 
                                         left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
                                         WHERE e.viaje_activo = true
                                         and us.id = p.id_chofer)")){
-            $msg= "No se pudo activar la proforma, el chofer ya tiene un viaje activo";
-            header("location:/home?error=$msg");
-            exit();
-        }
+          $msg= "No se pudo activar la proforma, el chofer ya tiene un viaje activo";
+          header("location:/home?error=$msg");
+          exit();
+      }
         elseif(!$this->database->insert("INSERT INTO estado_viaje values ($numero, true)")){
-            $msg= "No se pudo activar la proforma";
+           $msg= "No se pudo activar la proforma";
             header("location:/home?error=$msg");
             exit();
         }
@@ -101,4 +101,6 @@ class ProformaModel
         header("location:/home?msg=$msg");
         exit();
     }
+
+
 }

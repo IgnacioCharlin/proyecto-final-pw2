@@ -6,6 +6,7 @@
             <li><a href="/home">Inicio</a></li>
             <li><a href="/roles">Asignar Rol</a></li>
             <li><a href="/camion">Cargar Camion</a></li>
+            <li><a href="/camion/mantenimietnoCamion">Mantenimiento Camion</a></li>
         </ul>
     </section>
     <section class="reporte">
@@ -47,4 +48,5 @@
         {{/msg}}
         <div class="w3-red">{{error}}</div>
 </main>
+
 {{> footer}}

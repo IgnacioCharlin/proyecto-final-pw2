@@ -3,7 +3,7 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="/cargarDatosViaje/posicion">Cargar Gasto</a></li>
+            <li><a href="/cargarDatosViaje">Actulizar estado del viaje</a></li>
 
         </ul>
     </section>

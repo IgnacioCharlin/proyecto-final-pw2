@@ -313,7 +313,7 @@ tbody{
     margin-bottom: 1rem;
 }
 
-/** Pagina Finalizar Proforma **/
+/** Pagina finalizar proforma **/
 .formulario-gasto{
     display: flex;
     flex-direction: column-reverse;
