@@ -20,7 +20,7 @@ class ProformaModel
                                             left join sistematransporte.estado_viaje e on p.numero = e.id_viaje 
                                             WHERE  e.viaje_activo = true
                                             AND ca.patente = p.id_camion)");
-        $semis = $this->database->query("SELECT patente FROM semi WHERE estado = true");
+        $semis = $this->database->insert("SELECT patente FROM semi WHERE estado = true");
         $data["choferes"] = $choferes;
         $data["camiones"] = $camiones;
         $data["semis"] = $semis;
@@ -56,7 +56,7 @@ class ProformaModel
         if(!$this->database->insert("DELETE FROM `proforma` WHERE `proforma`.`numero` = $numero")) {
             $result["vista"] = "View/proformaView.php";
             $result["error"] = "Error al eliminar la proforma";
-        } else $result["vista"] = "View/homeAdministradorView.php";
+        } else header("location:/home");
         return $result;
     }
 
