@@ -44,7 +44,10 @@ class CamionController
     }
 
     public function reparacion(){
-        echo $this->render->render("View/reparacionView.php");
+
+        $data["camiones"] = $this->traerCamionesEnReparacion();
+
+        echo $this->render->render("View/reparacionView.php", $data);
     }
 
     public function cargarDeReparacion(){
@@ -52,7 +55,15 @@ class CamionController
        $repuesto = $_POST["repuesto"];
        $precio = $_POST["precio"];
        $estado = $_POST["estado"];
-       echo $patente.$repuesto.$precio.$estado;
+       $dias = $_POST["dias"];
+       $result = $this->camion->sacarMantenimiento($patente,$repuesto,$precio,$estado,$dias);
+       if ($result == "ok"){
+           header("location:/home?msg=Reparacion cargada ok");
+       }else{
+           $data["camiones"] = $this->traerCamionesEnReparacion();
+           $data["error"] = "Algo salio mal, revisa los datos cargados";
+           return $this->render->render("View/reparacionView.php", $data);
+       }
     }
 
     public function reparacionFinalizada(){

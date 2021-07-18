@@ -4,7 +4,8 @@
         <ul>
             <li><a href="/home">Inicio</a></li>
             <li><a href="/camion">Cargar Camion</a></li>
-            <li><a href="/camion/mantenimietnoCamion">Mantenimiento Camion</a></li>
+            <li><a href="/camion/mantenimietnoCamion">Envíar a Mantenimiento </a></li>
+            <li><a href="/camion/reparacion">Cargar Reparacion</a></li>
         </ul>
     </section>
     <section class="reporte">

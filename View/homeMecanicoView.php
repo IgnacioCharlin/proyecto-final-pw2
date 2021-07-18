@@ -9,11 +9,11 @@
     </section>
     <section class="reporte">
         <table class="tabla-proformas w3-table w3-bordered w3-centered">
-            {{#res}}
+            {{#msg}}
             <div class="w3-panel w3-green">
-                <h3>{{res}}</h3>
+                <h3>{{msg}}</h3>
             </div>
-            {{/res}}
+            {{/msg}}
             <thead>
             <tr>
                 <th scope="col">Patente</th>

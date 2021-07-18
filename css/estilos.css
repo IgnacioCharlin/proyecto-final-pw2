@@ -346,3 +346,16 @@ tbody{
     margin: auto;
     /*display: none;*/
 }
+.reparacion-estado{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 20rem;
+    height: 2rem;
+
+}
+.reparacion-estado p{
+    font-size: medium;
+    font-weight: bolder;
+}
+

@@ -7,25 +7,34 @@
 
         </ul>
     </section>
+    {{#res}}
+    <div class="w3-panel w3-green">
+        <h3>{{res}}</h3>
+    </div>
+    {{/res}}
     <section class="reporte">
         <form class="formulario-proforma" action="/camion/cargarDeReparacion" method="POST">
             <div class="campos-proforma">
                 <div class="div-proforma">
                     <label id="patente">Patente:</label>
-                    <input class="campos" type="text" id="patente" name="patente" required>
+                    <select class="campos" name="patente" id="patente">
+                        {{#camiones}}
+                        <option value="{{patente}}">{{patente}}</option>
+                        {{/camiones}}
+                    </select>
                     <label id="repuesto">Repuesto Cambiado: </label>
                     <input class="campos" type="text" id="repuesto" name="repuesto" required>
                 </div>
                 <div class="div-proforma">
                     <label id="precio">Monto: </label>
                     <input class="campos" type="number" id="precio" name="precio"  required>
+                    <label id="dias">cantidad dias </label>
+                    <input class="campos" type="number" id="dias" name="dias"  required>
+                    <div class="reparacion-estado ">
                     <label id="estado">Estado: </label>
-                    <div class="div-estado">
-                        <p class="p-estado">Finalizado</p>
+                        <p class="p-reparacion ">Finalizado</p>
                         <input class="campos" type="radio" id="estado" name="estado" value="1" required>
-                    </div>
-                    <div class="div-estado">
-                        <p class="p-estado">En Reparacion</p>
+                        <p class="p-reparacion">En Reparacion</p>
                         <input class="campos" type="radio" id="estado" name="estado" value="0" required>
                     </div>
                 </div>

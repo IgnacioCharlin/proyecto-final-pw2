@@ -46,6 +46,7 @@ class HomeController
 
     public function vistaMecanico()
     {
+        include_once ("CamionController.php");
         $camion = new CamionController($this->render,$this->database);
         $data["data"] = $camion->traerCamionesEnReparacion();
         $data["usuario"] = $_SESSION["usuario"];
