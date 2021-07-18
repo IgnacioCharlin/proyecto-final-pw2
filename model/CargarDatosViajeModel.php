@@ -55,6 +55,7 @@ class CargarDatosViajeModel
 
     public function finalizarViaje($numeroViaje){
         $this->database->insert("UPDATE estado_viaje SET viaje_activo = 0  WHERE id_viaje = $numeroViaje");
+        header("location:/home");
     }
 
 
