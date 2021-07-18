@@ -24,7 +24,10 @@ class HomeController
                     $this->vistaAdm();
                 }if($usuario["rol"]=="Supervisor"){
                     $this->vistaSupervisor();
-                } else{
+                }if($usuario["rol"] == "Mecanico"){
+                    $this->vistaMecanico();
+                }
+                else{
                     $this->vistaChofer($usuario["id"]);
                 }
             }
@@ -40,6 +43,16 @@ class HomeController
         echo $this->render->render("View/homeChoferView.php", $data);
 
     }
+
+    public function vistaMecanico()
+    {
+        $camion = new CamionController($this->render,$this->database);
+        $data["data"] = $camion->traerCamionesEnReparacion();
+        $data["usuario"] = $_SESSION["usuario"];
+        $data["msg"]= (isset($_GET["msg"]) ? $_GET["msg"] : null);
+        echo $this->render->render("View/homeMecanicoView.php", $data);
+    }
+
     public function vistaAdm(){
         $data["proforma"] = $this->profomaModel->verTodasLasProforma();
         $data["usuario"] = $_SESSION["usuario"];

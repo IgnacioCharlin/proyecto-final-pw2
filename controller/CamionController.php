@@ -39,4 +39,19 @@ class CamionController
         exit();
     }
 
+    public function traerCamionesEnReparacion(){
+        return $this->camion->camionesEnReparacion();
+    }
+
+    public function cargaDeReparacion($patente){
+
+    }
+
+    public function reparacionFinalizada(){
+       $patente = $_GET["patente"];
+       $datos = $this->camion->camionReparado($patente);
+       echo $this->render->render("View/homeMecanicoView.php", $datos);
+
+    }
+
 }

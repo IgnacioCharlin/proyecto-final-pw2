@@ -6,6 +6,7 @@ require_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once ("model/UsuarioModel.php");
 include_once ("model/ProformaModel.php");
 include_once ("model/CamionModel.php");
+include_once ("controller/CamionController.php");
 
 
 class ModuleInitializer
@@ -69,9 +70,9 @@ class ModuleInitializer
     }
 
     public function createCamionController(){
-
         include_once("controller/CamionController.php");
         return new CamionController($this->render, $this->database);
     }
+
 
 }

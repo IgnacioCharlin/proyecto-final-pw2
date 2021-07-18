@@ -31,6 +31,7 @@
                     <option>Administrador</option>
                     <option>Chofer</option>
                     <option>Supervisor</option>
+                    <option>Mecanico</option>
                     <option>Inactivo</option>
                 </select>
             </td>

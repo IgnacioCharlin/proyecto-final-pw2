@@ -42,4 +42,16 @@ class CamionModel
         }
         return $datos;
     }
+
+    public function camionesEnReparacion(){
+        return $this->connexion->query("SELECT * FROM camion WHERE estado = false");
+    }
+
+    public function camionReparado($patente){
+        $datos = "No se pudo enviar la reparacion del camion";
+        if ($this->connexion->insert("UPDATE camion set estado = true WHERE '$patente' = patente")){
+            $datos = "Se cargo la reparacion ";
+        }
+        return $datos;
+    }
 }
