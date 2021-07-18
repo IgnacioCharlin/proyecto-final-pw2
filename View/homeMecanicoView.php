@@ -4,7 +4,7 @@
     <section class="tareas">
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="/home/cargaDeReparacion">Cargar Reparacion</a></li>
+            <li><a href="/camion/reparacion">Cargar Reparacion</a></li>
         </ul>
     </section>
     <section class="reporte">

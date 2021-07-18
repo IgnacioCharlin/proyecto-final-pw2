@@ -43,8 +43,16 @@ class CamionController
         return $this->camion->camionesEnReparacion();
     }
 
-    public function cargaDeReparacion($patente){
+    public function reparacion(){
+        echo $this->render->render("View/reparacionView.php");
+    }
 
+    public function cargarDeReparacion(){
+       $patente = $_POST["patente"];
+       $repuesto = $_POST["repuesto"];
+       $precio = $_POST["precio"];
+       $estado = $_POST["estado"];
+       echo $patente.$repuesto.$precio.$estado;
     }
 
     public function reparacionFinalizada(){

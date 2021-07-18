@@ -73,6 +73,4 @@ class ModuleInitializer
         include_once("controller/CamionController.php");
         return new CamionController($this->render, $this->database);
     }
-
-
 }
