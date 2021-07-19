@@ -9,33 +9,34 @@
         </ul>
     </section>
     <section class="reporte">
+        <article class="agregar-proforma">
+            <a href="/proforma">Agregar Proforma</a>
+        </article>
         <table class="tabla-proformas w3-table w3-bordered w3-centered">
-            {{#msg}}
-            <div class="w3-panel w3-green">
-                <h3>{{msg}}</h3>
-            </div>
-            {{/msg}}
             <thead>
             <tr>
                 <th scope="col">Patente</th>
-                <th scope="col">Marca</th>
-                <th scope="col">Modelo</th>
-                <th scope="col">Reparado</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad De Dias</th>
             </tr>
             </thead>
-            {{#data}}
+            {{#reparaciones}}
             <form class="formulario-login" action="/roles/update" method="post" >
                 <tbody>
                 <td>{{patente}}</td>
-                <td>{{marca}}</td>
-                <td>{{modelo}}</td>
-                <td><a href="/camion/reparacionFinalizada?patente={{patente}}"><i class="fa fa-check" aria-hidden="true"></i></a></td>
-
+                <td>{{descripcion}}</td>
+                <td>{{precio}}</td>
+                <td>{{cant_dias}}</td>
                 </tbody>
             </form>
-            {{/data}}
+            {{/reparaciones}}
         </table>
-
+        {{#msg}}
+        <div class="w3-panel w3-green">
+            <h3>{{msg}}</h3>
+        </div>
+        {{/msg}}
         <div class="w3-red">{{error}}</div>
 </main>
 

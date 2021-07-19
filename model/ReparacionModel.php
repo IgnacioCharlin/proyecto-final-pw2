@@ -13,6 +13,10 @@ class ReparacionModel
         }
     }
 
+    public function getReparaciones(){
+        return $this->connexion->query("SELECT * FROM reparacion ORDER BY patente");
+    }
+
     public function traerReparacion($patente){
         return $this->connexion->query("SELECT * FROM reparacion WHERE patente = '$patente'");
     }

@@ -4,6 +4,7 @@
         <ul>
             <li><a href="/home">Inicio</a></li>
             <li><a href="/camion/reparacion">Cargar Reparacion</a></li>
+            <li><a href="/camion/historialReparaciones">Historial Reparacion</a></li>
 
         </ul>
     </section>

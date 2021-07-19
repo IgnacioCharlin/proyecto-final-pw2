@@ -75,4 +75,10 @@ class CamionController
         echo $this->render->render("View/finalizarReparacionView.php",$datos);
     }
 
+    public function historialReparaciones(){
+        $datos["reparaciones"] = $this->reparacion->getReparaciones();
+        echo $this->render->render("View/historialReparacionesView.php",$datos);
+    }
+
+
 }
