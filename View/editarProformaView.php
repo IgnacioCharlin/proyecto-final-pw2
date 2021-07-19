@@ -12,6 +12,7 @@
         <form class="formulario-proforma" action="/proforma/actualizarProforma" method="POST">
             <div class="campos-proforma">
             <div class="div-proforma">
+                {{#data}}
                 <label id="numero">Numero Proforma:</label>
                 <input class="campos" type="number" id="numero" name="numero" value="{{numero}}" required>
                 <label id="fecha">Fecha: </label>
@@ -25,13 +26,28 @@
             </div>
             <div class="div-proforma">
                 <label id="id_chofer">Legajo Chofer: </label>
-                <input class="campos" type="number" id="id_chofer" name="id_chofer" value="{{id_chofer}}" required>
+                <select class="campos" id="id_chofer" name="id_chofer" required >
+                    <option selected value="{{id_chofer}}"> {{id_chofer}}</option>
+                    {{#disponibles}}
+                    {{#choferes}}
+                    <option value="{{id}}">{{id}}</option>
+                    {{/choferes}}
+                    {{/disponibles}}
+                </select>
                 <label id="km_previstos">Kilometraje Previstos: </label>
                 <input class="campos" type="number" id="km_previstos" name="km_previstos" value="{{km_previsto}}" required>
                 <label id="combustible_previsto">Combustible Previsto: </label>
                 <input class="campos" type="number" id="combustible_previsto" name="combustible_previsto" value="{{combustible_previsto}}" required>
                 <label id="patente">Patente del Camión: </label>
-                <input class="campos" type="text" id="patente" name="patente" value="{{id_camion}}" required>
+                <select class="campos" id="patente" name="patente" required >
+                    <option value="{{id_camion}}" selected>{{id_camion}}</option>
+                    {{#disponibles}}
+                    {{#camiones}}
+                    <option>{{patente}}</option>
+                    {{/camiones}}
+                    {{/disponibles}}
+                </select>
+                {{/data}}
             </div>
             </div>
             <div class="w3-red">{{error}}</div>
@@ -40,6 +56,7 @@
                 <button type="submit" class="boton">Cargar</button>
             </div>
         </form>
+
         {{/data}}
     </section>
 </main>

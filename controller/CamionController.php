@@ -1,5 +1,6 @@
 <?php
 include_once ("model/CamionModel.php");
+include_once ("model/ReparacionModel.php");
 class CamionController
 {
     private $database;
@@ -67,7 +68,8 @@ class CamionController
        }
     }
 
-    public function reparacionFinalizada($patente){
+    public function reparacionFinalizada($patente= null){
+       $patente ==null ? $patente = $_GET["patente"]: $patente;
        $datos["montoTotal"] =$this->reparacion->gastoTotalReparacion($patente);
        $datos["reparaciones"] = $this->reparacion->traerReparacion($patente);
         echo $this->render->render("View/finalizarReparacionView.php",$datos);

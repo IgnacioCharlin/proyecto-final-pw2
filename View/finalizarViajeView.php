@@ -13,20 +13,26 @@
         <div class="formulario-gasto">
             <table class="tabla-proformas w3-table w3-bordered w3-centered">
                 <thead>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Hora</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Monto</th>
+                    <th scope="col">Km Reales</th>
+                    <th scope="col">Km Previstos</th>
+                    <th scope="col">Combustible gastado</th>
+                    <th scope="col">Combustible previsto</th>
+                    <th scope="col">Gastos adicionales</th>
+
                 </thead>
                 {{#data}}
-                <tbody>
+                <tbody>{{#kilometros}}
+                    <td>{{km_reales}}</td>
+                    <td>{{km_previsto}}</td>
+                {{/kilometros}}
+                {{#combustible}}
+                    <td>{{gastado}}</td>
+                    <td>{{previsto}}</td>
+                {{/combustible}}
+                {{#otros}}
+                <td>{{otros}}</td>
 
-                    <td>{{fecha}}</td>
-                    <td>{{hora}}</td>
-                    <td>{{descripcion}}</td>
-                    <td>{{gasto}}</td>
-
-                    {{/data}}
+                {{/otros}}
                     <a href="/cargarDatosViaje/finalizarViaje?numero={{numeroViaje}}" class="cancelar finalizar">Finalizar</a>
                     {{#total}}
                     <div class="total-gasto">
@@ -34,6 +40,9 @@
                         <p class="total">{{total}}</p>
                     </div>
                     {{/total}}
+
+
+                {{/data}}
                 </tbody>
             </table>
 

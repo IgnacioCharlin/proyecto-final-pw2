@@ -16,6 +16,7 @@ class CargarDatosViajeController
     public function index()
     {
         $result = $this->cargar->viajeActual();
+
         echo $this->render->render("View/cargarPosicion.php", $result);
     }
 
@@ -41,8 +42,10 @@ class CargarDatosViajeController
 
     public function finalizarViaje(){
         $result["numeroViaje"] = $_GET["numero"];
-        $result["data"] = $this->cargar->finalizarViaje($result["numeroViaje"]);
-        echo $this->render->render("View/homeChoferView.php", $result);
+        if($this->cargar->finalizarViaje($result["numeroViaje"])){
+        header("location:/home?msg=Se finalizo el viaje");
+
+        }
 
     }
 

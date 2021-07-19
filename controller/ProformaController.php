@@ -1,5 +1,8 @@
 <?php
 include_once ("model/ProformaModel.php");
+include_once ("model/CamionModel.php");
+include_once ("model/UsuarioModel.php");
+
 class ProformaController
 {
     private $database;
@@ -7,6 +10,7 @@ class ProformaController
     private $proforma;
     private $usuario;
     private $camion;
+
     public function __construct($render, $database,$usuarioModel,$camionModel)
     {
         $this->database = $database;
@@ -62,6 +66,7 @@ class ProformaController
     public function editarProforma(){
         $numero = $_GET["numero"];
         $result["data"]= $this->proforma->verProforma($numero);
+
         echo $this->render->render("View/editarProformaView.php",$result);
     }
     public function activarProforma(){
@@ -81,16 +86,16 @@ class ProformaController
         $patente = $_POST["patente"];
         if($this->usuario->esChofer($id_chofer) != null) {
             if($this->camion->estaDisponible($patente) != null){
-                $result = $this->proforma->editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente);
-                echo $this->render->render($result["vista"], $result);
+               $this->proforma->editarProforma($numero, $fecha, $cliente, $origen, $destino, $id_chofer, $km_previsto, $combustible_previsto, $patente);
+
                 return header("location:/home");
             }else{
-                $result["error"] = "Ese camion no esta disponible";
-                return $this->render->render("View/editarProformaView.php", $result);
+                $result = "Ese camion no esta disponible";
+                return header("location:/home?error=$result");
             }
         } else{
-            $result["error"] = "No existe Chofer con ese legajo";
-            return $this->render->render("View/editarProformaView.php", $result);
+            $result = "No existe Chofer con ese legajo";
+            return header("location:/home?error=$result");
         }
 
     }

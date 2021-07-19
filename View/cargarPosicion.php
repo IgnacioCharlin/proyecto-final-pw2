@@ -13,11 +13,12 @@
 
             <div id="mapa" class="mapa" style=""></div>
             <!--            cuando avancemos hay que ocultar las coordenadas ahora se dejan para ver que las captura real desde el navegador web, falta mobile-->
-
             </div>
             <div class="col-posicion-input">
+                {{#0}}
                 <label id="numeroViaje">Viaje numero: {{numero}}</label>
                 <input style="display: none" type="text" name="numeroViaje" id="numeroViaje" value="{{numero}}" REQUIRED>
+                {{/0}}
                 <labe>Posición actual</labe>
                 <input class="campos" type="text" name="coordenadas" id="coordenadas" REQUIRED>
                 <label id="fecha">Fecha:</label>
