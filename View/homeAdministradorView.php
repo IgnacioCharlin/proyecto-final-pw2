@@ -7,7 +7,6 @@
             <li><a href="/roles">Asignar Rol</a></li>
             <li><a href="/camion">Cargar Camion</a></li>
             <li><a href="/camion/mantenimietnoCamion">Envíar a Mantenimiento </a></li>
-            <li><a href="/camion/reparacion">Cargar Reparacion</a></li>
         </ul>
     </section>
     <section class="reporte">

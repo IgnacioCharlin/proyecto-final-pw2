@@ -7,6 +7,7 @@ include_once ("model/UsuarioModel.php");
 include_once ("model/ProformaModel.php");
 include_once ("model/CamionModel.php");
 include_once ("controller/CamionController.php");
+include_once ("model/ReparacionModel.php");
 
 
 class ModuleInitializer

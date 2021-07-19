@@ -55,15 +55,20 @@ class CamionModel
         return $datos;
     }
 
-    public function sacarMantenimiento($patente, $repuesto, $precio, $estado, $dias)
-    {
+    public function sacarMantenimiento($patente, $repuesto, $precio, $estado, $dias){
         if($this->connexion->insert("INSERT INTO reparacion (patente, descripcion, precio, estado, cant_dias) values ('$patente','$repuesto',$precio,$estado, $dias )")){
-
             $estado ? $this->camionReparado($patente) : null;
+            if($estado == 1){
+                if($this->camionReparado($patente)){
+                    return "ok";
+                }
+            }
             return "ok";
         }
         return "error";
+
     }
+
 
 
 }

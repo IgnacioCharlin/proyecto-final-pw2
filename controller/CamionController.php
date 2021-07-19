@@ -5,11 +5,13 @@ class CamionController
     private $database;
     private $render;
     private $camion;
+    private $reparacion;
     public function __construct($render, $database)
     {
         $this->database = $database;
         $this->render = $render;
         $this->camion = new CamionModel($database);
+        $this->reparacion = new ReparacionModel($database);
     }
 
     public function index()
@@ -56,21 +58,19 @@ class CamionController
        $precio = $_POST["precio"];
        $estado = $_POST["estado"];
        $dias = $_POST["dias"];
-       $result = $this->camion->sacarMantenimiento($patente,$repuesto,$precio,$estado,$dias);
-       if ($result == "ok"){
-           header("location:/home?msg=Reparacion cargada ok");
+        $result = $this->reparacion->agregarReparacion($patente,$repuesto,$precio,$estado,$dias);
+       if($estado == 1){
+           $this->reparacionFinalizada($patente);
+           $this->camion->camionReparado($patente);
        }else{
-           $data["camiones"] = $this->traerCamionesEnReparacion();
-           $data["error"] = "Algo salio mal, revisa los datos cargados";
-           return $this->render->render("View/reparacionView.php", $data);
+           header("location:/home");
        }
     }
 
-    public function reparacionFinalizada(){
-       $patente = $_GET["patente"];
-       $datos = $this->camion->camionReparado($patente);
-       echo $this->render->render("View/homeMecanicoView.php", $datos);
-
+    public function reparacionFinalizada($patente){
+       $datos["montoTotal"] =$this->reparacion->gastoTotalReparacion($patente);
+       $datos["reparaciones"] = $this->reparacion->traerReparacion($patente);
+        echo $this->render->render("View/finalizarReparacionView.php",$datos);
     }
 
 }
