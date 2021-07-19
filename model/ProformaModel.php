@@ -39,7 +39,7 @@ class ProformaModel
         $result["disponibles"] = $this->datosProforma();
 
         $result["data"]= ($this->database->query("SELECT * FROM proforma WHERE numero = $numero") ? $this->database->query("SELECT * FROM proforma WHERE numero = $numero") : $res );
-//        var_dump($result);
+//       var_dump($result);
         return $result;
     }
 

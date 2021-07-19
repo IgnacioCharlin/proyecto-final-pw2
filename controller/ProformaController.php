@@ -54,7 +54,7 @@ class ProformaController
     public function verProforma(){
         $numero = $_GET["numero"];
         $result["data"]= $this->proforma->verProforma($numero);
-        echo $this->render->render("View/verProformaView.php", $result);
+        echo $this->render->render("View/verProformaView.php", $result["data"]);
     }
 
     public function eliminarProforma(){

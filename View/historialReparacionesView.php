@@ -9,9 +9,6 @@
         </ul>
     </section>
     <section class="reporte">
-        <article class="agregar-proforma">
-            <a href="/proforma">Agregar Proforma</a>
-        </article>
         <table class="tabla-proformas w3-table w3-bordered w3-centered">
             <thead>
             <tr>
